@@ -17,12 +17,14 @@
     <header id="header" class="d-flex justify-content-between justify-content-xl-around align-items-center px-5 row fixed-top bg-glass shadow">
         <div id="logo" class="col-6 col-lg-2 p-0 h-100 ">
             <a href="index.html">
-                <img src="img/logo.png" alt="logo" class="d-none d-lg-inline h-100"/>
-                <img src="img/logoMd.png" alt="logo" class="d-lg-none h-75 my-10p"/>
+                <!-- <img src="img/logo.png" alt="logo" class="d-none d-lg-inline h-100"/> -->
+                <img src="img/logoMd.png" alt="logo" class="d-none d-sm-inline h-75 my-10p"/>
+                <img src="img/logoXs.png" alt="logo" class="d-sm-none h-75 my-10p"/>
+
             </a>
         </div>
-        <nav id="meni" class="d-none d-lg-block h-100 p-0 col-lg-8 col-xl-6">
-            <ul class="w-100 m-0 p-0 h-100 d-flex justify-content-between">
+        <nav id="meni" class="d-none d-lg-block h-100 p-0 ml-5 col-lg-7 col-xl-6">
+            <ul class="w-100 ml-4 p-0 h-100 d-flex justify-content-between">
                 <li class="activeLink">
                   <a href="index.html">Home</a>
                 </li>
@@ -41,7 +43,7 @@
               </ul>
         </nav>
         <div id="navDesno" class="d-flex justify-content-end align-items-center col-6 col-lg-2 p-0">
-            <a href="#" class="d-none d-sm-inline-block">
+            <a href="#" class="ml-4">
                 <span class="far fa-comment"></span> Suggest
             </a>
             <nav id="resMeni" class="d-lg-none">
@@ -60,9 +62,6 @@
                     </li>
                     <li>
                         <a href="#">Author</a>
-                    </li>
-                    <li class="d-sm-none">
-                        <a href="#"><span class="far fa-comment"></span> Suggest</a>
                     </li>
                   </ul>
             </nav>
