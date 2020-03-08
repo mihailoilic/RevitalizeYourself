@@ -1,0 +1,114 @@
+$primary: #2B804E;
+$color1: #42965F;
+$color2: rgb(187, 255, 195);
+@font-face{
+    src: url("../fonts/Muli-Light.ttf");
+    font-family: MuliLight;
+}
+@font-face{
+    src: url("../fonts/Muli-Regular.ttf");
+    font-family: Muli;
+}
+@mixin flex($justify: center, $align: center, $direction: row){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+body {
+    font-family: Muli;
+    font-size: 16px;
+}
+a {
+    text-decoration: none;
+    color: $primary;
+    &:hover {
+        text-decoration: none;
+        color: $color1;
+    }
+}
+ul {
+    list-style-type: none;
+}
+.my-10p {
+    margin: 10px 0px;
+}
+.bg-glass {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(5px);
+}
+.page-bg-image {
+    min-height: 600px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#home {
+    background-image: url("../img/bgHome.jpg");
+}
+
+#header {
+    z-index: 10;
+    height: 80px;
+    a {
+        font-size: 1.1em;
+    }
+    #meni {
+        li {
+            height: 100%;
+            @include flex();
+            width: 120px;
+        }
+        .activeLink {
+            background: rgba(0,0,0,0.1);
+        }
+    }
+    // RESPONSIVE MENI
+    #navDesno {
+        #meniOpen {
+            font-size: 2em;
+        }
+        #meniClose {
+            display: none;
+            font-size: 2.5em;
+        }
+        #resMeni {
+            visibility: hidden;
+            position: fixed;
+            top: -220px;
+            left: 15px;
+            width: 100%;
+            background: rgba($primary,0.7);
+            transition: top .5s, filter 1s, visibility 1s;
+            filter: opacity(0%);
+            ul {
+                li {
+                    margin: 5px;
+                    transition: transform .3s;
+                    &:hover {
+                        transform: scale(1.2,1.25);
+                    }
+                    &.activeLink {
+                        a {
+                            color: $color2;
+                        }
+                    }
+                    a {
+                        color: #fff;
+                    }
+                }
+            }
+            &:target {
+                visibility: visible;
+                top: 80px;
+                filter: opacity(100%);
+                & + a {
+                    display: none;
+                    & + a {
+                        display: inline;
+                    }
+                }
+            }
+        }
+    }
+}

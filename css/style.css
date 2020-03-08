@@ -1,0 +1,140 @@
+@font-face {
+  src: url("../fonts/Muli-Light.ttf");
+  font-family: MuliLight;
+}
+
+@font-face {
+  src: url("../fonts/Muli-Regular.ttf");
+  font-family: Muli;
+}
+
+body {
+  font-family: Muli;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: #2B804E;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #42965F;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.my-10p {
+  margin: 10px 0px;
+}
+
+.bg-glass {
+  background: rgba(255, 255, 255, 0.7);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+
+.page-bg-image {
+  min-height: 600px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#home {
+  background-image: url("../img/bgHome.jpg");
+}
+
+#header {
+  z-index: 10;
+  height: 80px;
+}
+
+#header a {
+  font-size: 1.1em;
+}
+
+#header #meni li {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 120px;
+}
+
+#header #meni .activeLink {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+#header #navDesno #meniOpen {
+  font-size: 2em;
+}
+
+#header #navDesno #meniClose {
+  display: none;
+  font-size: 2.5em;
+}
+
+#header #navDesno #resMeni {
+  visibility: hidden;
+  position: fixed;
+  top: -220px;
+  left: 15px;
+  width: 100%;
+  background: rgba(43, 128, 78, 0.7);
+  -webkit-transition: top .5s, visibility 1s, -webkit-filter 1s;
+  transition: top .5s, visibility 1s, -webkit-filter 1s;
+  transition: top .5s, filter 1s, visibility 1s;
+  transition: top .5s, filter 1s, visibility 1s, -webkit-filter 1s;
+  -webkit-filter: opacity(0%);
+          filter: opacity(0%);
+}
+
+#header #navDesno #resMeni ul li {
+  margin: 5px;
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+}
+
+#header #navDesno #resMeni ul li:hover {
+  -webkit-transform: scale(1.2, 1.25);
+          transform: scale(1.2, 1.25);
+}
+
+#header #navDesno #resMeni ul li.activeLink a {
+  color: #bbffc3;
+}
+
+#header #navDesno #resMeni ul li a {
+  color: #fff;
+}
+
+#header #navDesno #resMeni:target {
+  visibility: visible;
+  top: 80px;
+  -webkit-filter: opacity(100%);
+          filter: opacity(100%);
+}
+
+#header #navDesno #resMeni:target + a {
+  display: none;
+}
+
+#header #navDesno #resMeni:target + a + a {
+  display: inline;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,11 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description"
+    content=""/>
+    <meta name="keywords" content=""/>
+    <meta name="author" content="Mihailo Ilic"/>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+    <title>Revitalize Yourself!</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
 </head>
 <body>
-    
+    <header id="header" class="d-flex justify-content-between justify-content-xl-around align-items-center px-5 row fixed-top bg-glass shadow">
+        <div id="logo" class="col-6 col-lg-2 p-0 h-100 ">
+            <a href="index.html">
+                <img src="img/logo.png" alt="logo" class="d-none d-lg-inline h-100"/>
+                <img src="img/logoMd.png" alt="logo" class="d-lg-none h-75 my-10p"/>
+            </a>
+        </div>
+        <nav id="meni" class="d-none d-lg-block h-100 p-0 col-lg-8 col-xl-6">
+            <ul class="w-100 m-0 p-0 h-100 d-flex justify-content-between">
+                <li class="activeLink">
+                  <a href="index.html">Home</a>
+                </li>
+                <li>
+                  <a href="#">Green tea</a>
+                </li>
+                <li>
+                  <a href="#">Black tea</a>
+                </li>
+                <li>
+                  <a href="#">Other types</a>
+                </li>
+                <li>
+                    <a href="#">Author</a>
+                </li>
+              </ul>
+        </nav>
+        <div id="navDesno" class="d-flex justify-content-end align-items-center col-6 col-lg-2 p-0">
+            <a href="#" class="d-none d-sm-inline-block">
+                <span class="far fa-comment"></span> Suggest
+            </a>
+            <nav id="resMeni" class="d-lg-none">
+                <ul class="w-100 m-0 p-0 d-flex flex-column align-items-center">
+                    <li class="activeLink">
+                      <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                      <a href="#">Green tea</a>
+                    </li>
+                    <li>
+                      <a href="#">Black tea</a>
+                    </li>
+                    <li>
+                      <a href="#">Other types</a>
+                    </li>
+                    <li>
+                        <a href="#">Author</a>
+                    </li>
+                    <li class="d-sm-none">
+                        <a href="#"><span class="far fa-comment"></span> Suggest</a>
+                    </li>
+                  </ul>
+            </nav>
+            <a href="#resMeni" id="meniOpen" class="d-lg-none ml-4">
+                <span class="fas fa-bars"></span>
+            </a>
+            <a href="#meniOpen" id="meniClose" class="d-lg-none ml-4">
+                <span><span class="fas fa-times"></span></span>
+            </a>
+        </div>
+    </header>
+    <main clas="container-fluid">
+        <section id="home" class="page-bg-image">
+
+        </section>
+    </main>
 </body>
 </html>
