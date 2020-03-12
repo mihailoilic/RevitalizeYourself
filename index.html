@@ -14,69 +14,67 @@
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
 </head>
 <body>
-    <header id="header" class="d-flex justify-content-between justify-content-xl-around align-items-center px-5 row fixed-top bg-glass shadow">
-        <div id="logo" class="col-6 col-lg-2 p-0 h-100 ">
-            <a href="index.html">
-                <!-- <img src="img/logo.png" alt="logo" class="d-none d-lg-inline h-100"/> -->
-                <img src="img/logoMd.png" alt="logo" class="d-none d-sm-inline h-75 my-10p"/>
-                <img src="img/logoXs.png" alt="logo" class="d-sm-none h-75 my-10p"/>
-
-            </a>
-        </div>
-        <nav id="meni" class="d-none d-lg-block h-100 p-0 ml-5 col-lg-7 col-xl-6">
-            <ul class="w-100 ml-4 p-0 h-100 d-flex justify-content-between">
-                <li class="activeLink">
-                  <a href="index.html">Home</a>
+    <header id="header" class="container-fluid fixed-top bg-glass p-0 shadow">
+      <nav class="navbar navbar-expand-lg h-100 w-100 row justify-content-between justify-content-xl-around p-0">
+          <a href="index.html" id="logo" class="navbar-brand h-80p p-0 col-2 m-0 ml-md-5 ml-4">
+              <img src="img/logoMd.png" alt="logo" class="d-none d-sm-inline h-75 my-10p"/>
+              <img src="img/logoXs.png" alt="logo" class="d-sm-none h-75 my-10p"/>
+          </a>
+          <button class="navbar-toggler p-0 col-2 d-lg-none m-0 mr-4" type="button" data-toggle="collapse" data-target="#meni" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <!-- <span class="navbar-toggler-icon"></span> -->
+            <span class="fas fa-bars"></span>
+          </button>
+          <div id="meni" class="collapse navbar-collapse p-0 ml-lg-5 col-12 col-lg-8">
+            <ul class="navbar-nav">
+                <li class="nav-item activeLink">
+                  <a class="nav-link" href="index.html">Home</a>
                 </li>
-                <li>
-                  <a href="#">Green tea</a>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Green tea</a>
                 </li>
-                <li>
-                  <a href="#">Black tea</a>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Black tea</a>
                 </li>
-                <li>
-                  <a href="#">Other types</a>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Other types</a>
                 </li>
-                <li>
-                    <a href="#">Author</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Author</a>
                 </li>
               </ul>
-        </nav>
-        <div id="navDesno" class="d-flex justify-content-end align-items-center col-6 col-lg-2 p-0">
+          </div>
+      </nav>
+        <!--
             <a href="#" class="ml-4">
                 <span class="far fa-comment"></span> Suggest
             </a>
-            <nav id="resMeni" class="d-lg-none">
-                <ul class="w-100 m-0 p-0 d-flex flex-column align-items-center">
-                    <li class="activeLink">
-                      <a href="index.html">Home</a>
-                    </li>
-                    <li>
-                      <a href="#">Green tea</a>
-                    </li>
-                    <li>
-                      <a href="#">Black tea</a>
-                    </li>
-                    <li>
-                      <a href="#">Other types</a>
-                    </li>
-                    <li>
-                        <a href="#">Author</a>
-                    </li>
-                  </ul>
-            </nav>
-            <a href="#resMeni" id="meniOpen" class="d-lg-none ml-4">
-                <span class="fas fa-bars"></span>
-            </a>
-            <a href="#meniOpen" id="meniClose" class="d-lg-none ml-4">
-                <span><span class="fas fa-times"></span></span>
-            </a>
-        </div>
+        -->
     </header>
     <main clas="container-fluid">
-        <section id="home" class="page-bg-image">
-
+        <section id="home" class="position-relative page-bg-image pt-5 d-flex flex-column justify-content-start align-items-end">
+          <div id="hNaslov" class="container-fluid d-flex flex-column align-items-center justify-content-center text-white">
+            <h1 class="m-2 text-shadow">Tea</h1>
+            <p class="m-2 text-justify text-shadow">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <a href="#" class="button py-2 px-3 m-2 rounded">Learn more</a>
+          </div>
+          <div id="advantages" class="row w-100 justify-content-center">
+              <article class="card col-9 col-md-4 col-lg-2 m-3 bg-white">
+                asdffdsaadcadfsasadfsa
+              </article>
+              <article class="card col-9 col-md-4 col-lg-2 m-3 bg-white">
+                asdffdsaadcadfsasadfsa
+              </article>
+              <article class="card col-9 col-md-4 col-lg-2 m-3 bg-white">
+                asdffdsaadcadfsasadfsa
+              </article>
+              <article class="card col-9 col-md-4 col-lg-2 m-3 bg-white">
+                asdffdsaadcadfsasadfsa
+              </article>
+          </div>
         </section>
     </main>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
 </html>

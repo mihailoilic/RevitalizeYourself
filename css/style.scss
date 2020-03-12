@@ -1,6 +1,8 @@
 $primary: #2B804E;
 $color1: #42965F;
 $color2: rgb(187, 255, 195);
+$whiteTrans: rgba(255, 255, 255, 0.8);
+$darkTrans: rgba(0,0,0,0.2);
 @font-face{
     src: url("../fonts/Muli-Light.ttf");
     font-family: MuliLight;
@@ -15,6 +17,23 @@ $color2: rgb(187, 255, 195);
     justify-content: $justify;
     align-items: $align;
 }
+@mixin res($tacka) {
+    @if $tacka == sm {
+        @media (min-width: 576px) { @content; }
+    }
+    @else if $tacka == md {
+        @media (min-width: 768px) { @content; }
+    }
+    @else if $tacka == lg {
+        @media (min-width: 992px) { @content; }
+    }
+    @else if $tacka == xl {
+        @media (min-width: 1200px) { @content; }
+    }
+}
+.row {
+    margin: 0px;
+}
 body {
     font-family: Muli;
     font-size: 16px;
@@ -27,88 +46,92 @@ a {
         color: $color1;
     }
 }
+.button {
+    color: #fff;
+    border: 1px solid #fff;
+    background-color: rgba(0,0,0,0.2);
+    transition: background .3s;
+    &:hover {
+        background: $whiteTrans;
+        border-color: transparent;
+    }
+}
+.navbar-toggler {
+    &:focus {
+        outline: none;
+    }
+    span {
+        font-size: 2em;
+        color: $primary;
+    }
+}
 ul {
     list-style-type: none;
 }
 .my-10p {
     margin: 10px 0px;
 }
+.h-80p {
+    height: 80px;
+}
+.text-shadow {
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.6);
+}
 .bg-glass {
-    background: rgba(255, 255, 255, 0.7);
+    background: $whiteTrans;
     backdrop-filter: blur(5px);
 }
 .page-bg-image {
-    min-height: 600px;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
 }
-
+.overlay {
+    bottom: 0px;
+    background: linear-gradient(to top, rgba(0,0,0,0.0) 40%, rgba(0,0,0,0.8) 100%);
+}
 #home {
     background-image: url("../img/bgHome.jpg");
 }
-
 #header {
     z-index: 10;
-    height: 80px;
     a {
         font-size: 1.1em;
     }
     #meni {
-        li {
-            height: 100%;
-            @include flex();
-            width: 120px;
+        @include res(lg) {
+            height: 80px;
         }
-        .activeLink {
-            background: rgba(0,0,0,0.1);
-        }
-    }
-    // RESPONSIVE MENI
-    #navDesno {
-        #meniOpen {
-            font-size: 2em;
-        }
-        #meniClose {
-            display: none;
-            font-size: 2.2em;
-        }
-        #resMeni {
-            visibility: hidden;
-            position: fixed;
-            top: -220px;
-            left: 15px;
-            width: 100%;
-            background: rgba($primary,0.7);
-            transition: top .5s, filter 1s, visibility 1s;
-            filter: opacity(0%);
-            ul {
-                li {
-                    margin: 5px;
-                    transition: transform .3s;
-                    &:hover {
-                        transform: scale(1.2,1.25);
-                    }
-                    &.activeLink {
-                        a {
-                            color: $color2;
-                        }
-                    }
-                    a {
-                        color: #fff;
-                    }
+        ul {
+            height: inherit;
+            li {
+                @include flex();
+                width: 100%;
+                @include res(lg) {
+                    height: inherit;
+                    width: 120px;
                 }
-            }
-            &:target {
-                visibility: visible;
-                top: 80px;
-                filter: opacity(100%);
-                & + a {
-                    display: none;
-                    & + a {
-                        display: inline;
-                    }
+                &.activeLink {
+                    background: rgba(0,0,0,0.1);
                 }
             }
         }
     }
+ }
+#hNaslov {
+    margin-top: 100px;
+    width: 100%;
+    background: $darkTrans;
+    backdrop-filter: blur(5px);
+    @include res(lg){
+        width: 40%;
+        background: none;
+        backdrop-filter: none;
+        margin: 5%;
+    }
+}
+#advantages {
+    margin-top: 15%;
+    min-height: 300px;
+    margin-bottom: 120%;
 }
