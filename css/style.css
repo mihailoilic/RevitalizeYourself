@@ -94,6 +94,8 @@ ul {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  -webkit-transition: height 999999999s;
+  transition: height 999999999s;
 }
 
 .overlay {
