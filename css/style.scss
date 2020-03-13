@@ -99,8 +99,7 @@ ul {
 .page-bg-image {
     background-repeat: no-repeat;
     background-size: cover;
-    // background-attachment: fixed;
-    background-position: top left;
+    background-attachment: fixed;
 }
 .overlay {
     bottom: 0px;
@@ -125,6 +124,7 @@ ul {
 }
 #home {
     background-image: url("../img/bgHome.jpg");
+    min-height: 120vh;
 }
 #header {
     z-index: 10;
