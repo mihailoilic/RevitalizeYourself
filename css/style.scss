@@ -1,6 +1,6 @@
 $primary: #2B804E;
 $color1: #42965F;
-$color2: rgb(187, 255, 195);
+$color2: #72BC79;
 $whiteTrans: rgba(255, 255, 255, 0.8);
 $darkTrans: rgba(0,0,0,0.2);
 @font-face{
@@ -31,12 +31,23 @@ $darkTrans: rgba(0,0,0,0.2);
         @media (min-width: 1200px) { @content; }
     }
 }
-.row {
-    margin: 0px;
-}
-body {
+html {
+    scroll-behavior: smooth;
     font-family: Muli;
     font-size: 16px;
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+    ::-webkit-scrollbar-thumb {
+        background-color: $primary; 
+        border-radius: 5px;
+        &:hover{
+            background: $color1; 
+        }
+    }
+}
+.row {
+    margin: 0px;
 }
 a {
     text-decoration: none;
@@ -79,7 +90,7 @@ ul {
 }
 .bg-glass {
     background: $whiteTrans;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(6px);
 }
 .page-bg-image {
     background-repeat: no-repeat;
@@ -89,6 +100,23 @@ ul {
 .overlay {
     bottom: 0px;
     background: linear-gradient(to top, rgba(0,0,0,0.0) 40%, rgba(0,0,0,0.8) 100%);
+}
+.card {
+    h2 {
+        font-size: 1.2em;
+    }
+    span {
+        font-size: 6em;
+        color: $primary;
+    }
+}
+.btn-outline-success {
+    border-color: $primary;
+    color: $primary;
+    &:hover {
+        border-color: transparent;
+        background-color: $primary;
+    }
 }
 #home {
     background-image: url("../img/bgHome.jpg");
@@ -109,7 +137,7 @@ ul {
                 width: 100%;
                 @include res(lg) {
                     height: inherit;
-                    width: 120px;
+                    width: 130px;
                 }
                 &.activeLink {
                     background: rgba(0,0,0,0.1);
@@ -132,6 +160,8 @@ ul {
 }
 #advantages {
     margin-top: 15%;
-    min-height: 300px;
-    margin-bottom: 120%;
+    margin-bottom: 10%;
+    .card-title {
+        min-height: 70px;
+    }
 }
