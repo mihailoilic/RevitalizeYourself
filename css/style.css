@@ -86,10 +86,13 @@ ul {
           backdrop-filter: blur(6px);
 }
 
+.bg-wt {
+  background: rgba(255, 255, 255, 0.8);
+}
+
 .page-bg-image {
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
   background-position: top left;
 }
 
