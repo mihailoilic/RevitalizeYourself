@@ -20,15 +20,10 @@ html ::-webkit-scrollbar {
 
 html ::-webkit-scrollbar-thumb {
   background-color: #2B804E;
-  border-radius: 5px;
 }
 
 html ::-webkit-scrollbar-thumb:hover {
   background: #42965F;
-}
-
-.row {
-  margin: 0px;
 }
 
 a {
@@ -39,6 +34,10 @@ a {
 a:hover {
   text-decoration: none;
   color: #42965F;
+}
+
+.row {
+  margin: 0px;
 }
 
 .button {
@@ -90,12 +89,14 @@ ul {
   background: rgba(255, 255, 255, 0.8);
 }
 
+.border-line {
+  border: 2px solid #2B804E;
+}
+
 .page-bg-image {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  -webkit-transition: height 999999999s;
-  transition: height 999999999s;
 }
 
 .overlay {
@@ -125,7 +126,6 @@ ul {
 
 #home {
   background-image: url("../img/bgHome.jpg");
-  min-height: 120vh;
 }
 
 #header {
@@ -174,12 +174,15 @@ ul {
   background: rgba(0, 0, 0, 0.1);
 }
 
+#nwrapper {
+  height: 80vh;
+}
+
 #hNaslov {
   margin-top: 100px;
-  width: 100%;
   background: rgba(0, 0, 0, 0.2);
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
 }
 
 @media (min-width: 992px) {
@@ -188,16 +191,103 @@ ul {
     background: none;
     -webkit-backdrop-filter: none;
             backdrop-filter: none;
-    margin: 5%;
+    margin: 80px;
   }
 }
 
 #advantages {
-  margin-top: 15%;
-  margin-bottom: 10%;
+  padding: 20vh 0;
+}
+
+@media (min-width: 992px) {
+  #advantages {
+    padding: 20vh 150px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #advantages {
+    padding: 20vh 0;
+  }
+}
+
+@media (min-width: 576px) {
+  #advantages .card {
+    max-width: 300px;
+  }
+}
+
+@media (min-width: 992px) {
+  #advantages .card {
+    max-width: 300px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #advantages .card {
+    max-width: 250px;
+  }
 }
 
 #advantages .card-title {
   min-height: 70px;
+}
+
+.img-border {
+  background-image: url("../img/teaLeaves.png");
+  background-size: cover;
+  opacity: 0.8;
+  height: 100px;
+  top: -100px;
+}
+
+@media (min-width: 992px) {
+  .img-border {
+    height: 150px;
+    top: -150px;
+  }
+}
+
+.bg-img-text {
+  min-height: 90px;
+  background-position: 50% 50%;
+  background-attachment: fixed;
+  font-size: 70px;
+  font-weight: 700;
+  color: transparent;
+  -webkit-background-clip: text;
+}
+
+#home-content-wrapper h3 {
+  top: 0px;
+  left: -5%;
+  padding: 0 10% 1% 7%;
+  width: 110vw;
+  -webkit-transform: rotate(-5deg);
+          transform: rotate(-5deg);
+  mix-blend-mode: screen;
+  color: #000;
+  font-size: 50px;
+  font-weight: 700;
+}
+
+@media (min-width: 576px) {
+  #home-content-wrapper h3 {
+    font-size: 60px;
+  }
+}
+
+@media (min-width: 768px) {
+  #home-content-wrapper h3 {
+    font-size: 70px;
+  }
+}
+
+#home-content {
+  margin-top: 250px;
+}
+
+#home-content #blokovi {
+  padding: 30px;
 }
 /*# sourceMappingURL=style.css.map */
