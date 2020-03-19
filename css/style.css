@@ -52,6 +52,7 @@ a:hover {
 .button:hover {
   background: rgba(255, 255, 255, 0.8);
   border-color: transparent;
+  color: #2B804E;
 }
 
 .navbar-toggler:focus {

@@ -1,5 +1,7 @@
 $primary: #2B804E;
+// $primary: #00904B;
 $color1: #42965F;
+// $color1: #72BC79;
 $color2: #72BC79;
 $whiteTrans: rgba(255, 255, 255, 0.8);
 $darkTrans: rgba(0,0,0,0.2);
@@ -70,6 +72,7 @@ a {
     &:hover {
         background: $whiteTrans;
         border-color: transparent;
+        color: $primary;
     }
 }
 .navbar-toggler {
