@@ -1,11 +1,10 @@
 @font-face {
-  src: url("../fonts/Muli-Light.ttf");
-  font-family: MuliLight;
-}
-
-@font-face {
   src: url("../fonts/Muli-Regular.ttf");
   font-family: Muli;
+}
+
+*:focus {
+  outline-color: #2B804E !important;
 }
 
 html {
@@ -55,8 +54,8 @@ a:hover {
   color: #2B804E;
 }
 
-.navbar-toggler:focus {
-  outline: none;
+.form-control:focus {
+  border-color: #2B804E;
 }
 
 .navbar-toggler span {
@@ -102,8 +101,9 @@ ul {
 
 .overlay {
   bottom: 0px;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(40%, rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.8)));
-  background: linear-gradient(to top, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.8) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, rgba(0, 0, 0, 0.7)), to(black));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 30%, black 100%);
+  z-index: 1;
 }
 
 .card h2 {
@@ -115,6 +115,14 @@ ul {
   color: #2B804E;
 }
 
+.btn-success {
+  background-color: #2B804E;
+}
+
+.btn-success:hover {
+  background-color: #42965F;
+}
+
 .btn-outline-success {
   border-color: #2B804E;
   color: #2B804E;
@@ -123,6 +131,11 @@ ul {
 .btn-outline-success:hover {
   border-color: transparent;
   background-color: #2B804E;
+}
+
+#poruka {
+  height: 150px;
+  resize: none;
 }
 
 #home {
@@ -167,7 +180,13 @@ ul {
 @media (min-width: 992px) {
   #header #meni ul li {
     height: inherit;
-    width: 130px;
+    width: 120px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #header #meni ul li {
+    width: 140px;
   }
 }
 
@@ -288,7 +307,61 @@ ul {
   margin-top: 250px;
 }
 
-#home-content #blokovi {
-  padding: 30px;
+#home-content #home-content-text {
+  background-image: url("../img/greenTeaField.jpg");
+  background-size: cover;
+}
+
+@media (min-width: 768px) {
+  #home-content #home-content-text {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 calc(81% + 64px);
+            flex: 0 0 calc(81% + 64px);
+    max-width: none;
+  }
+}
+
+#home-content #home-content-text .hca-content p {
+  font-size: 1em;
+}
+
+@media (min-width: 768px) {
+  #home-content .col-md-3h {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 27%;
+            flex: 0 0 27%;
+  }
+}
+
+#home-content .hca-content {
+  border-width: 3px !important;
+  margin: 10%;
+  z-index: 2;
+  min-height: 200px;
+  min-width: 80%;
+}
+
+#home-content .hca-content p {
+  font-size: 0.85em;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+#home-content .hca-content h2 {
+  font-size: 1.4em;
+}
+
+#home-content #gt-img {
+  background-image: url("../img/green.jpg");
+  background-size: cover;
+}
+
+#home-content #bt-img {
+  background-image: url("../img/black.jpg");
+  background-size: cover;
+}
+
+#home-content #ot-img {
+  background-image: url("../img/chamomile.jpg");
+  background-size: cover;
 }
 /*# sourceMappingURL=style.css.map */

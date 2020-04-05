@@ -5,10 +5,10 @@ $color1: #42965F;
 $color2: #72BC79;
 $whiteTrans: rgba(255, 255, 255, 0.8);
 $darkTrans: rgba(0,0,0,0.2);
-@font-face{
-    src: url("../fonts/Muli-Light.ttf");
-    font-family: MuliLight;
-}
+// @font-face{
+//     src: url("../fonts/Muli-Light.ttf");
+//     font-family: MuliLight;
+// }
 @font-face{
     src: url("../fonts/Muli-Regular.ttf");
     font-family: Muli;
@@ -31,6 +31,11 @@ $darkTrans: rgba(0,0,0,0.2);
     }
     @else if $tacka == xl {
         @media (min-width: 1200px) { @content; }
+    }
+}
+* {
+    &:focus {
+        outline-color: $primary !important;
     }
 }
 html {
@@ -59,10 +64,6 @@ a {
 .row {
     margin: 0px;
 }
-// .overflow-x-hidden {
-//     overflow-x: hidden;
-//     overflow-y: visible;
-// }
 .button {
     display: block;
     color: #fff;
@@ -75,10 +76,12 @@ a {
         color: $primary;
     }
 }
-.navbar-toggler {
+.form-control {
     &:focus {
-        outline: none;
+        border-color: $primary;
     }
+}
+.navbar-toggler {
     span {
         font-size: 2em;
         color: $primary;
@@ -113,7 +116,8 @@ ul {
 }
 .overlay {
     bottom: 0px;
-    background: linear-gradient(to top, rgba(0,0,0,0.0) 40%, rgba(0,0,0,0.8) 100%);
+    background: linear-gradient(to bottom, rgba(0,0,0,0.7) 30%, rgba(0,0,0,1) 100%);
+    z-index: 1;
 }
 .card {
     h2 {
@@ -124,6 +128,13 @@ ul {
         color: $primary;
     }
 }
+
+.btn-success {
+    background-color: $primary;
+    &:hover {
+        background-color: $color1;
+    }
+}
 .btn-outline-success {
     border-color: $primary;
     color: $primary;
@@ -131,6 +142,10 @@ ul {
         border-color: transparent;
         background-color: $primary;
     }
+}
+#poruka {
+    height: 150px;
+    resize: none;
 }
 #home {
     background-image: url("../img/bgHome.jpg");
@@ -151,7 +166,10 @@ ul {
                 width: 100%;
                 @include res(lg) {
                     height: inherit;
-                    width: 130px;
+                    width: 120px;
+                }
+                @include res(xl) {
+                    width: 140px;
                 }
                 &.activeLink {
                     background: rgba(0,0,0,0.1);
@@ -240,12 +258,52 @@ ul {
 }
 #home-content {
     margin-top: 250px;
-        //transform: rotate(-5deg);
-    #blokovi {
-        padding: 30px;
-        //transform: rotate(5deg);
+    #home-content-text {
+        @include res(md) {
+
+            flex:0 0 calc(81% + 64px);
+            max-width: none;
+        }
+        .hca-content{
+            p {
+                font-size: 1em;
+            }
+        }
+        background-image: url("../img/greenTeaField.jpg");
+        background-size: cover;
+    }
+    .col-md-3h {
+        @include res(md) {
+            flex:0 0 27%;
+        }
+    }
+    .hca-content{
+        border-width: 3px !important;
+        margin: 10%;
+        z-index: 2;
+        min-height: 200px;
+        min-width: 80%;
+        p {
+            font-size: 0.85em;
+            color: rgba(255,255,255,0.7);
+        }
+        h2 {
+            font-size: 1.4em;
+        }
+    }
+    #gt-img {
+        background-image: url("../img/green.jpg");
+        background-size: cover;
+    }
+    #bt-img {
+        background-image: url("../img/black.jpg");
+        background-size: cover;
+    }
+    #ot-img {
+        background-image: url("../img/chamomile.jpg");
+        background-size: cover;
     }
     
 }
-
-    
+footer {
+}
