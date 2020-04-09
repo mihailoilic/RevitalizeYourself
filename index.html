@@ -20,8 +20,7 @@
               <img src="img/logoMd.png" alt="logo" class="d-none d-sm-inline h-75 my-10p"/>
               <img src="img/logoXs.png" alt="logo" class="d-sm-none h-75 my-10p"/>
           </a>
-          <button class="navbar-toggler p-0 col-2 col-sm-1 d-lg-none m-0 mr-3" type="button" data-toggle="collapse" data-target="#meni" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <!-- <span class="navbar-toggler-icon"></span> -->
+          <button class="navbar-toggler p-0 col-2 col-sm-1 d-lg-none m-0 mr-3" type="button" data-toggle="collapse" data-target="#meni" aria-label="Toggle navigation">
             <span class="fas fa-bars"></span>
           </button>
           <div id="meni" class="collapse navbar-collapse p-0 ml-lg-5 col-12 col-lg-9">
@@ -30,16 +29,16 @@
                   <a class="nav-link" href="index.html">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Green tea</a>
+                  <a class="nav-link" href="green.html">Green tea</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Black tea</a>
+                  <a class="nav-link" href="black.html">Black tea</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Other types</a>
+                  <a class="nav-link" href="other.html">Other types</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Author</a>
+                    <a class="nav-link" href="author.html">Author</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#" data-toggle="modal" data-target="#suggest">
@@ -54,7 +53,7 @@
     <div class="modal fade" tabindex="-1" role="dialog" id="suggest">
       <div class="modal-dialog" role="document">
         <div class="modal-content bg-glass rounded-0">
-          <div class="modal-header border-white">
+          <div class="modal-header border-0">
             <h5 class="modal-title font-weight-normal">Make a suggestion</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
@@ -72,7 +71,7 @@
               </div>
           </form>
           </div>
-          <div class="modal-footer border-white">
+          <div class="modal-footer border-0">
             <button type="button" class="btn btn-outline-success rounded-0" data-dismiss="modal">Close</button>
           </div>
         </div>
@@ -161,11 +160,11 @@
     </div>
     <!-- MAIN CONTENT -->
     <!-- NASLOV + TEKST -->
-    <main clas="container-fluid">
+    <!-- <main clas="container-fluid"> -->
         <section id="home" class="position-relative page-bg-image pt-5 d-flex flex-column justify-content-start align-items-end overflow-hidden">
           <div id="nwrapper" class="container-fluid p-0 d-flex justify-content-end align-items-start">
             <div id="hNaslov" class="d-flex flex-column align-items-center justify-content-start text-white">
-              <h1 class="m-2 text-shadow">A Cup of Healing</h1>
+              <h1 class="m-2 text-shadow text-center">A Cup of Healing</h1>
               <p class="m-2 text-justify text-shadow">Tea is the most highly consumed beverage in the world after water, and plays a big role in a healthy diet. No matter what the season, tea can be a tasty beverage since it can be served iced or hot.
               </p>
               <a href="#advantages" class="button py-2 px-3 m-2">Learn more</a>
@@ -218,24 +217,30 @@
                 </div>
                 <div id="gt-img" class="col-11 col-md-3h p-0 m-3 d-flex align-items-center justify-content-center shadow">
                   <div class="position-absolute overlay w-100 h-100"></div>
+                  <a href="green.html">
                     <div class="hca-content border text-white text-center p-3 d-flex flex-column align-items-center justify-content-center">
-                      <h2>Green tea</h2>
-                      <p>Click here to learn more about green tea.</p>
+                        <h2>Green tea</h2>
+                        <p>Click here to learn more about green tea.</p>
                     </div>
-                  </div>
+                  </a>
+                </div>
                 <div id="bt-img" class="col-11 col-md-3h p-0 m-3 d-flex align-items-center justify-content-center shadow">
                   <div class="position-absolute overlay w-100 h-100"></div>
+                  <a href="black.html">
                     <div class="hca-content border text-white text-center p-3 d-flex flex-column align-items-center justify-content-center">
-                      <h2>Black tea</h2>
-                      <p>Click here to learn more about black tea. </p>
+                        <h2>Black tea</h2>
+                        <p>Click here to learn more about black tea. </p>
                     </div>
-                  </div>
+                  </a>
+                </div>
                   <div id="ot-img" class="col-11 col-md-3h p-0 m-3 d-flex align-items-center justify-content-center shadow">
                     <div class="position-absolute overlay w-100 h-100"></div>
-                      <div class="hca-content border text-white text-center p-3 d-flex flex-column align-items-center justify-content-center">
+                    <a href="other.html">
+                      <div class="hca-content h-100 border text-white text-center p-3 d-flex flex-column align-items-center justify-content-center">
                         <h2>Other types</h2>
                         <p>Click here to learn more about other types of tea. </p>
                       </div>
+                    </a>
                   </div>
               </div>  
             </div>
@@ -243,18 +248,18 @@
          <footer class="row bg-wt w-100 mt-2 py-4">
            <ul id="social" class="col-12 col-md-4 m-2 m-md-0 d-flex justify-content-center">
             <li class="mx-3">
-              <a href="#" target="_blank">
-                <span>f</span>
+              <a href="https://www.facebook.com/" target="_blank" title="Facebook">
+                <span class="fab fa-facebook"></span>
               </a>
             </li>
             <li class="mx-3">
-              <a href="#" target="_blank">
-                <span>i</span>
+              <a href="https://www.instagram.com/" target="_blank" title="Instagram">
+                <span class="fab fa-instagram"></span>
               </a>
             </li>
             <li class="mx-3">
-              <a href="#" target="_blank">
-                <span>y</span>
+              <a href="https://www.youtube.com/" target="_blank" title="Youtube">
+                <span class="fab fa-youtube"></span>
               </a>
             </li>
            </ul>
@@ -263,20 +268,19 @@
           </p>
            <ul id="links" class="col-12 col-md-4 m-2 m-md-0 d-flex justify-content-center">
             <li class="mx-3">
-              <a href="#" target="_blank">
-                SASS
+              <a href="css/style.scss" target="_blank" title="SCSS file">
+                <span class="fab fa-sass"></span>
               </a>
               <li class="mx-3">
-                <a href="#" target="_blank">
-                  SITEMAP
+                <a href="sitemap.xml" target="_blank" title="Sitemap">
+                  <span class="fas fa-sitemap"></span>
                 </a>
               </li>
             </li>
            </ul>
          </footer>
       </section>
-    </main>
-  </footer>
+    <!-- </main> -->
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
