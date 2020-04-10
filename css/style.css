@@ -41,23 +41,12 @@ a:hover {
   color: #42965F;
 }
 
+ul {
+  list-style-type: none;
+}
+
 .row {
   margin: 0px;
-}
-
-.button, #home-content .col-md-3h .hca-content {
-  display: block;
-  color: #fff;
-  border: 1px solid #fff;
-  background-color: rgba(0, 0, 0, 0.2);
-  -webkit-transition: background .3s;
-  transition: background .3s;
-}
-
-.button:hover, #home-content .col-md-3h .hca-content:hover {
-  background: rgba(255, 255, 255, 0.8);
-  border-color: transparent;
-  color: #2B804E;
 }
 
 .form-control:focus {
@@ -67,49 +56,6 @@ a:hover {
 .navbar-toggler span {
   font-size: 2.2em;
   color: #2B804E;
-}
-
-ul {
-  list-style-type: none;
-}
-
-.my-10p {
-  margin: 10px 0px;
-}
-
-.h-80p {
-  height: 80px;
-}
-
-.text-shadow {
-  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
-}
-
-.bg-glass {
-  background: rgba(255, 255, 255, 0.8);
-  -webkit-backdrop-filter: blur(6px);
-          backdrop-filter: blur(6px);
-}
-
-.bg-wt {
-  background: rgba(255, 255, 255, 0.8);
-}
-
-.border-line {
-  border: 2px solid #2B804E;
-}
-
-.page-bg-image {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-}
-
-.overlay {
-  bottom: 0px;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(40%, rgba(0, 0, 0, 0.6)), to(black));
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 40%, black 100%);
-  z-index: 1;
 }
 
 .card h2 {
@@ -139,6 +85,111 @@ ul {
   background-color: #2B804E;
 }
 
+.button, #home-content .col-md-3h .hca-content {
+  display: block;
+  color: #fff;
+  border: 1px solid #fff;
+  background-color: rgba(0, 0, 0, 0.2);
+  -webkit-transition: background .3s;
+  transition: background .3s;
+}
+
+.button:hover, #home-content .col-md-3h .hca-content:hover {
+  background: rgba(255, 255, 255, 0.8);
+  border-color: transparent;
+  color: #2B804E;
+}
+
+.z--1 {
+  z-index: -1;
+}
+
+.z-0 {
+  z-index: 0;
+}
+
+.z-1 {
+  z-index: 1;
+}
+
+.z-2, #home-content a {
+  z-index: 2;
+}
+
+.z-3 {
+  z-index: 3;
+}
+
+.my-10p {
+  margin: 10px 0px;
+}
+
+.h-80p {
+  height: 80px;
+}
+
+.h-100vh {
+  height: 100vh;
+}
+
+.w-100vw {
+  width: 100vw;
+}
+
+.text-shadow {
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+.bg-glass {
+  background: rgba(255, 255, 255, 0.8);
+  -webkit-backdrop-filter: blur(6px);
+          backdrop-filter: blur(6px);
+}
+
+.bg-wt {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.border-line {
+  border: 2px solid #2B804E;
+}
+
+.page-bg-image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.overlay, .overlay-light {
+  bottom: 0px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(40%, rgba(0, 0, 0, 0.6)), to(black));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 40%, black 100%);
+}
+
+.overlay-light {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.fit-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.img-border {
+  background-image: url("../img/teaLeaves.png");
+  background-size: cover;
+  opacity: 0.8;
+  height: 100px;
+  top: -100px;
+}
+
+@media (min-width: 992px) {
+  .img-border {
+    height: 150px;
+    top: -150px;
+  }
+}
+
 #poruka {
   height: 150px;
   resize: none;
@@ -146,10 +197,6 @@ ul {
 
 #home {
   background-image: url("../img/bgHome.jpg");
-}
-
-#header {
-  z-index: 10;
 }
 
 #header a {
@@ -204,7 +251,7 @@ ul {
   height: 80vh;
 }
 
-#hNaslov {
+#nwrapper #naslov {
   margin-top: 100px;
   background: rgba(0, 0, 0, 0.2);
   -webkit-backdrop-filter: blur(3px);
@@ -213,7 +260,7 @@ ul {
 }
 
 @media (min-width: 992px) {
-  #hNaslov {
+  #nwrapper #naslov {
     padding: 0px;
     width: 40%;
     background: none;
@@ -259,21 +306,6 @@ ul {
 
 #advantages .card-title {
   min-height: 70px;
-}
-
-.img-border {
-  background-image: url("../img/teaLeaves.png");
-  background-size: cover;
-  opacity: 0.8;
-  height: 100px;
-  top: -100px;
-}
-
-@media (min-width: 992px) {
-  .img-border {
-    height: 150px;
-    top: -150px;
-  }
 }
 
 .bg-img-text {
@@ -333,7 +365,6 @@ ul {
   min-width: 80%;
   min-height: 200px;
   margin: 10%;
-  z-index: 2;
 }
 
 #home-content #home-content-text .hca-content p {
@@ -354,7 +385,6 @@ ul {
 }
 
 #home-content a {
-  z-index: 2;
   min-width: 80%;
   min-height: 200px;
   margin: 10%;
@@ -387,6 +417,36 @@ ul {
 #home-content #ot-img {
   background-image: url("../img/chamomile.jpg");
   background-size: cover;
+}
+
+.carousel .carousel-inner {
+  top: 0px;
+  left: 0px;
+}
+
+.carousel .carousel-indicators {
+  top: 60vh;
+  bottom: none;
+}
+
+.carousel .carousel-indicators li {
+  width: 8vw;
+  margin: 0 0.5vw;
+  height: 0.8vw;
+  max-width: 50px;
+  max-height: 5px;
+}
+
+#page-naslov {
+  bottom: 40vh;
+  font-size: 13vw;
+  color: white;
+}
+
+@media (min-width: 992px) {
+  #page-naslov {
+    font-size: 128px;
+  }
 }
 
 footer span {

@@ -1,4 +1,5 @@
 $primary: #2B804E;
+//$primary: rgb(52, 128, 62);
 $color1: #42965F;
 $color2: #72BC79;
 $whiteTrans: rgba(255, 255, 255, 0.8);
@@ -31,6 +32,7 @@ $darkTrans: rgba(0,0,0,0.2);
         @media (min-width: 1200px) { @content; }
     }
 }
+// GLOBALNO
 * {
     &:focus {
         outline-color: $primary !important;
@@ -61,20 +63,12 @@ a {
         color: $color1;
     }
 }
+ul {
+    list-style-type: none;
+}
+// BOOTSTRAP IZMENE
 .row {
     margin: 0px;
-}
-.button {
-    display: block;
-    color: #fff;
-    border: 1px solid #fff;
-    background-color: rgba(0,0,0,0.2);
-    transition: background .3s;
-    &:hover {
-        background: $whiteTrans;
-        border-color: transparent;
-        color: $primary;
-    }
 }
 .form-control {
     &:focus {
@@ -86,38 +80,6 @@ a {
         font-size: 2.2em;
         color: $primary;
     }
-}
-ul {
-    list-style-type: none;
-}
-.my-10p {
-    margin: 10px 0px;
-}
-.h-80p {
-    height: 80px;
-}
-.text-shadow {
-    text-shadow: 2px 2px 10px rgba(0,0,0,0.6);
-}
-.bg-glass {
-    background: $whiteTrans;
-    backdrop-filter: blur(6px);
-}
-.bg-wt {
-    background: $whiteTrans;
-}
-.border-line {
-    border: 2px solid $primary ;
-}
-.page-bg-image {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-}
-.overlay {
-    bottom: 0px;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.6) 40%, rgba(0,0,0,1) 100%);
-    z-index: 1;
 }
 .card {
     h2 {
@@ -143,15 +105,88 @@ ul {
         background-color: $primary;
     }
 }
+// MOJE KLASE
+.button {
+    display: block;
+    color: #fff;
+    border: 1px solid #fff;
+    background-color: rgba(0,0,0,0.2);
+    transition: background .3s;
+    &:hover {
+        background: $whiteTrans;
+        border-color: transparent;
+        color: $primary;
+    }
+}
+@for $i from -1 through 3 {
+    .z-#{$i} {
+        z-index: $i;
+    }
+}
+.my-10p {
+    margin: 10px 0px;
+}
+.h-80p {
+    height: 80px;
+}
+.h-100vh {
+    height: 100vh;
+}
+.w-100vw {
+    width: 100vw;
+}
+.text-shadow {
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.6);
+}
+.bg-glass {
+    background: $whiteTrans;
+    backdrop-filter: blur(6px);
+}
+.bg-wt {
+    background: $whiteTrans;
+}
+.border-line {
+    border: 2px solid $primary ;
+}
+.page-bg-image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.overlay {
+    bottom: 0px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.6) 40%, rgba(0,0,0,1) 100%);
+}
+.overlay-light {
+    @extend .overlay;
+    // background: linear-gradient(to bottom, rgba(0,0,0,0.2) 60%, rgba(0,0,0,0.9) 100%);
+    background: rgba(0,0,0,0.3);
+}
+.fit-cover {
+    object-fit: cover;
+}
+.img-border {
+    background-image: url("../img/teaLeaves.png");
+    background-size: cover;
+    opacity: 0.8;
+    height: 100px;
+    top: -100px;
+    @include res(lg)
+    {
+        height: 150px;
+        top: -150px;
+    }
+}
+// MODAL FORMA
 #poruka {
     height: 150px;
     resize: none;
 }
+// HOME
 #home {
     background-image: url("../img/bgHome.jpg");
 }
 #header {
-    z-index: 10;
     a {
         font-size: 1.1em;
     }
@@ -180,18 +215,18 @@ ul {
  }
 #nwrapper {
     height: 80vh;
-}
-#hNaslov {
-    margin-top: 100px; 
-    background: $darkTrans;
-    backdrop-filter: blur(3px);
-    padding: 1% 3%;
-    @include res(lg){
-        padding: 0px;
-        width: 40%;
-        background: none;
-        backdrop-filter: none;
-        margin: 80px;
+    #naslov {
+        margin-top: 100px; 
+        background: $darkTrans;
+        backdrop-filter: blur(3px);
+        padding: 1% 3%;
+        @include res(lg){
+            padding: 0px;
+            width: 40%;
+            background: none;
+            backdrop-filter: none;
+            margin: 80px;
+        }
     }
 }
 #advantages {
@@ -216,18 +251,6 @@ ul {
     }
     .card-title {
         min-height: 70px;
-    }
-}
-.img-border {
-    background-image: url("../img/teaLeaves.png");
-    background-size: cover;
-    opacity: 0.8;
-    height: 100px;
-    top: -100px;
-    @include res(lg)
-    {
-        height: 150px;
-        top: -150px;
     }
 }
 .bg-img-text {
@@ -270,7 +293,6 @@ ul {
             min-width: 80%;
             min-height: 200px;
             margin: 10%;
-            z-index: 2;
             p {
                 font-size: 1em;
             }
@@ -291,7 +313,7 @@ ul {
         }
     }
     a {
-        z-index: 2;
+        @extend .z-2;
         min-width: 80%;
         min-height: 200px;
         margin: 10%;
@@ -320,6 +342,35 @@ ul {
         background-size: cover;
     }
     
+}
+// TEA TYPES
+.carousel {
+    .carousel-inner {
+        top: 0px;
+        left: 0px;
+    }
+    .carousel-indicators {
+        top: 60vh;
+        bottom: none;
+        li {
+            width: 8vw;
+            margin: 0 0.5vw;
+            height: 0.8vw;
+            max-width: 50px;
+            max-height: 5px;
+        }
+    }
+}
+#page-naslov {
+    bottom: 40vh;
+    font-size: 13vw;
+    @include res(lg) {
+        font-size: 128px;
+    }
+    color: rgba(255, 255, 255, 1);
+}
+#page-content {
+    //margin-top: 100vh;
 }
 footer {
     span {
