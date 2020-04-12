@@ -177,14 +177,23 @@ ul {
         top: -150px;
     }
 }
-// MODAL FORMA
+.watermark {
+    span {
+        color: $primary;
+        font-size: 240px;
+        // @include res(md) {
+        //     font-size: 240px;
+        // }
+        // @include res(xl) {
+        //     font-size: 200px;
+        // }
+        opacity: 0.3;
+    }
+}
+// MODAL SUGGEST FORMA
 #poruka {
     height: 150px;
     resize: none;
-}
-// HOME
-#home {
-    background-image: url("../img/bgHome.jpg");
 }
 #header {
     a {
@@ -213,6 +222,10 @@ ul {
         }
     }
  }
+// HOME
+#home {
+    background-image: url("../img/bgHome.jpg");
+}
 #nwrapper {
     height: 80vh;
     #naslov {
@@ -285,25 +298,27 @@ ul {
     margin-top: 250px;
     #home-content-text {
         @include res(md) {
-
-            flex:0 0 calc(81% + 64px);
+            flex:0 0 calc(90% + 28px);
             max-width: none;
         }
+        // @include res(xl) {
+        //     flex:0 0 calc(81% + 32px);
+        // }
         .hca-content{
             min-width: 80%;
             min-height: 200px;
             margin: 10%;
-            p {
-                font-size: 1em;
-            }
         }
         background-image: url("../img/greenTeaField.jpg");
         background-size: cover;
     }
     .col-md-3h {
         @include res(md) {
-            flex:0 0 27%;
+            flex:0 0 30%;
         }
+        // @include res(xl) {
+        //     flex:0 0 27%;
+        // }
         .hca-content {
             @extend .button;
             &:hover {
@@ -370,7 +385,12 @@ ul {
     color: rgba(255, 255, 255, 1);
 }
 #page-content {
-    //margin-top: 100vh;
+    #page-content-text {
+        max-width: 1500px;
+        p {
+            white-space: pre-wrap;
+        }
+    }
 }
 footer {
     span {

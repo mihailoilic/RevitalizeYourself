@@ -190,13 +190,15 @@ ul {
   }
 }
 
+.watermark span {
+  color: #2B804E;
+  font-size: 240px;
+  opacity: 0.3;
+}
+
 #poruka {
   height: 150px;
   resize: none;
-}
-
-#home {
-  background-image: url("../img/bgHome.jpg");
 }
 
 #header a {
@@ -245,6 +247,10 @@ ul {
 
 #header #meni ul li.activeLink {
   background: rgba(0, 0, 0, 0.1);
+}
+
+#home {
+  background-image: url("../img/bgHome.jpg");
 }
 
 #nwrapper {
@@ -355,8 +361,8 @@ ul {
 @media (min-width: 768px) {
   #home-content #home-content-text {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 calc(81% + 64px);
-            flex: 0 0 calc(81% + 64px);
+        -ms-flex: 0 0 calc(90% + 28px);
+            flex: 0 0 calc(90% + 28px);
     max-width: none;
   }
 }
@@ -367,15 +373,11 @@ ul {
   margin: 10%;
 }
 
-#home-content #home-content-text .hca-content p {
-  font-size: 1em;
-}
-
 @media (min-width: 768px) {
   #home-content .col-md-3h {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 27%;
-            flex: 0 0 27%;
+        -ms-flex: 0 0 30%;
+            flex: 0 0 30%;
   }
 }
 
@@ -447,6 +449,14 @@ ul {
   #page-naslov {
     font-size: 128px;
   }
+}
+
+#page-content #page-content-text {
+  max-width: 1500px;
+}
+
+#page-content #page-content-text p {
+  white-space: pre-wrap;
 }
 
 footer span {
