@@ -81,15 +81,6 @@ ul {
         color: $primary;
     }
 }
-.card {
-    h2 {
-        font-size: 1.2em;
-    }
-    span {
-        font-size: 6em;
-        color: $primary;
-    }
-}
 
 .btn-success {
     background-color: $primary;
@@ -145,6 +136,10 @@ ul {
 .bg-wt {
     background: $whiteTrans;
 }
+.bg-wt2 {
+    // background: linear-gradient(150deg, rgba(8, 151, 15, 0.2), rgba(255, 255, 255, 0.1) 70%);
+    background: rgba(255, 255, 255, 0.1);
+}
 .border-line {
     border: 2px solid $primary ;
 }
@@ -159,7 +154,6 @@ ul {
 }
 .overlay-light {
     @extend .overlay;
-    // background: linear-gradient(to bottom, rgba(0,0,0,0.2) 60%, rgba(0,0,0,0.9) 100%);
     background: rgba(0,0,0,0.3);
 }
 .fit-cover {
@@ -177,7 +171,14 @@ ul {
         top: -150px;
     }
 }
+.text-image {
+    color: $primary;
+    background-position: 50% 50%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 .watermark {
+    top: 0px;
     span {
         color: $primary;
         font-size: 240px;
@@ -251,7 +252,13 @@ ul {
         padding: 20vh 0;
     }
     .card {
-        
+        h2 {
+            font-size: 1.2em;
+        }
+        span {
+            font-size: 6em;
+            color: $primary;
+        }
         @include res(sm) {
             max-width: 300px;
         }
@@ -379,16 +386,40 @@ ul {
 #page-naslov {
     bottom: 40vh;
     font-size: 13vw;
+    font-weight: 500;
     @include res(lg) {
         font-size: 128px;
     }
     color: rgba(255, 255, 255, 1);
 }
 #page-content {
+    p {
+        white-space: pre-wrap;
+    }
+    h2 {
+        background-image: url("../img/greenTeaField.jpg");
+        // background-attachment: fixed;
+        filter: brightness(70%) saturate(80%);
+        font-size: 50px;
+        @include res(sm) {
+            font-size: 70px;
+        }
+        @include res(md) {
+            font-size: 80px;
+        }
+        @include res(lg) {
+            font-size: 90px;
+        }
+    }
     #page-content-text {
         max-width: 1500px;
+    }
+    #page-content-types {
+        h3 {
+            font-size: 1.7em;
+        }
         p {
-            white-space: pre-wrap;
+            font-size: 0.9em;
         }
     }
 }

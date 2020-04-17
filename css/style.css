@@ -58,15 +58,6 @@ ul {
   color: #2B804E;
 }
 
-.card h2 {
-  font-size: 1.2em;
-}
-
-.card span {
-  font-size: 6em;
-  color: #2B804E;
-}
-
 .btn-success {
   background-color: #2B804E;
 }
@@ -150,6 +141,10 @@ ul {
   background: rgba(255, 255, 255, 0.8);
 }
 
+.bg-wt2 {
+  background: rgba(255, 255, 255, 0.1);
+}
+
 .border-line {
   border: 2px solid #2B804E;
 }
@@ -188,6 +183,17 @@ ul {
     height: 150px;
     top: -150px;
   }
+}
+
+.text-image {
+  color: #2B804E;
+  background-position: 50% 50%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.watermark {
+  top: 0px;
 }
 
 .watermark span {
@@ -290,6 +296,15 @@ ul {
   #advantages {
     padding: 20vh 0;
   }
+}
+
+#advantages .card h2 {
+  font-size: 1.2em;
+}
+
+#advantages .card span {
+  font-size: 6em;
+  color: #2B804E;
 }
 
 @media (min-width: 576px) {
@@ -442,6 +457,7 @@ ul {
 #page-naslov {
   bottom: 40vh;
   font-size: 13vw;
+  font-weight: 500;
   color: white;
 }
 
@@ -451,12 +467,45 @@ ul {
   }
 }
 
+#page-content p {
+  white-space: pre-wrap;
+}
+
+#page-content h2 {
+  background-image: url("../img/greenTeaField.jpg");
+  -webkit-filter: brightness(70%) saturate(80%);
+          filter: brightness(70%) saturate(80%);
+  font-size: 50px;
+}
+
+@media (min-width: 576px) {
+  #page-content h2 {
+    font-size: 70px;
+  }
+}
+
+@media (min-width: 768px) {
+  #page-content h2 {
+    font-size: 80px;
+  }
+}
+
+@media (min-width: 992px) {
+  #page-content h2 {
+    font-size: 90px;
+  }
+}
+
 #page-content #page-content-text {
   max-width: 1500px;
 }
 
-#page-content #page-content-text p {
-  white-space: pre-wrap;
+#page-content #page-content-types h3 {
+  font-size: 1.7em;
+}
+
+#page-content #page-content-types p {
+  font-size: 0.9em;
 }
 
 footer span {
