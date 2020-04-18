@@ -159,6 +159,12 @@ ul {
 .fit-cover {
     object-fit: cover;
 }
+.img-bottom-border {
+    border: {
+        bottom-width: 2px;
+        bottom-style: solid;
+    }
+}
 .img-border {
     background-image: url("../img/teaLeaves.png");
     background-size: cover;
@@ -316,7 +322,7 @@ ul {
             min-height: 200px;
             margin: 10%;
         }
-        background-image: url("../img/greenTeaField.jpg");
+        background-image: url("../img/green3.jpg");
         background-size: cover;
     }
     .col-md-3h {
@@ -397,9 +403,9 @@ ul {
         white-space: pre-wrap;
     }
     h2 {
-        background-image: url("../img/greenTeaField.jpg");
+        background-image: url("../img/green3.jpg");
         // background-attachment: fixed;
-        filter: brightness(70%) saturate(80%);
+        filter: brightness(80%) saturate(80%);
         font-size: 50px;
         @include res(sm) {
             font-size: 70px;
@@ -412,11 +418,27 @@ ul {
         }
     }
     #page-content-text {
-        max-width: 1500px;
+        max-width: 1700px;
     }
     #page-content-types {
+        .col-xl-3h {
+            @include res(xl) {
+                flex:0 0 28%;
+            }
+        }
         h3 {
-            font-size: 1.7em;
+            font-size: 2.2em;
+            left: 1.25rem;
+            top: calc(-1.25rem - 0.6em);
+            &#h3green{
+                background: rgba(26, 95, 35, 0.7);
+            }
+            &#h3black {
+
+            }
+            &#h3other {
+
+            }
         }
         p {
             font-size: 0.9em;
