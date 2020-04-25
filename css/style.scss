@@ -1,22 +1,11 @@
 $primary: #2B804E;
-//$primary: rgb(52, 128, 62);
 $color1: #42965F;
 $color2: #72BC79;
 $whiteTrans: rgba(255, 255, 255, 0.8);
-$darkTrans: rgba(0,0,0,0.2);
-// @font-face{
-//     src: url("../fonts/Muli-Light.ttf");
-//     font-family: MuliLight;
-// }
+$darkTrans: rgba(0,0,0,0.3);
 @font-face{
     src: url("../fonts/Muli-Regular.ttf");
     font-family: Muli;
-}
-@mixin flex($justify: center, $align: center, $direction: row){
-    display: flex;
-    flex-direction: $direction;
-    justify-content: $justify;
-    align-items: $align;
 }
 @mixin res($tacka) {
     @if $tacka == sm {
@@ -127,7 +116,7 @@ ul {
     width: 100vw;
 }
 .text-shadow {
-    text-shadow: 2px 2px 10px rgba(0,0,0,0.6);
+    text-shadow: 2px 2px 14px rgba(0,0,0,0.8);
 }
 .bg-glass {
     background: $whiteTrans;
@@ -137,7 +126,6 @@ ul {
     background: $whiteTrans;
 }
 .bg-wt2 {
-    // background: linear-gradient(150deg, rgba(8, 151, 15, 0.2), rgba(255, 255, 255, 0.1) 70%);
     background: rgba(255, 255, 255, 0.1);
 }
 .border-line {
@@ -188,13 +176,33 @@ ul {
     span {
         color: $primary;
         font-size: 240px;
-        // @include res(md) {
-        //     font-size: 240px;
-        // }
-        // @include res(xl) {
-        //     font-size: 200px;
-        // }
         opacity: 0.3;
+        &#wblack {
+            color: rgb(119, 90, 76);
+        }
+        &#wother {
+            color: rgb(197, 180, 26);
+        }
+    }
+}
+.link-dashed {
+    border-bottom: 1px dashed #fff;
+    &:hover {
+        background: $darkTrans;
+        border: none;
+
+    }
+}
+.animate {
+    will-change: transform;
+    animation: scale-in .5s ease-out;
+    @keyframes scale-in {
+        0% {
+            transform: scale(0.92, 0.92);
+        }
+        100% {
+            transform: scale(1, 1);
+        }
     }
 }
 // MODAL SUGGEST FORMA
@@ -202,6 +210,7 @@ ul {
     height: 150px;
     resize: none;
 }
+// NAVIGACIJA
 #header {
     a {
         font-size: 1.1em;
@@ -213,7 +222,6 @@ ul {
         ul {
             height: inherit;
             li {
-                @include flex();
                 width: 100%;
                 @include res(lg) {
                     height: inherit;
@@ -231,145 +239,172 @@ ul {
  }
 // HOME
 #home {
+    filter: blur(0px); //za backdrop-filter bag
     background-image: url("../img/bgHome.jpg");
-}
-#nwrapper {
-    height: 80vh;
-    #naslov {
-        margin-top: 100px; 
-        background: $darkTrans;
-        backdrop-filter: blur(3px);
-        padding: 1% 3%;
-        @include res(lg){
-            padding: 0px;
-            width: 40%;
-            background: none;
-            backdrop-filter: none;
-            margin: 80px;
+    will-change: opacity, transform;
+    animation: home 0.5s ease-out;
+    @keyframes home {
+        0% {
+            transform: scale(0.9, 0.9);
+            opacity: 0.4;
+        }
+        100% {   
+            transform: scale(1, 1);
+            opacity: 1;
         }
     }
-}
-#advantages {
-    padding: 20vh 0;
-    @include res(lg) {
-        padding: 20vh 150px;
-    }
-    @include res(xl) {
-        padding: 20vh 0;
-    }
-    .card {
-        h2 {
-            font-size: 1.2em;
-        }
-        span {
-            font-size: 6em;
-            color: $primary;
-        }
-        @include res(sm) {
-            max-width: 300px;
-        }
-        @include res(lg) {
-            max-width: 300px;
-        }
-        @include res(xl) {
-            max-width: 250px;
-        }
-    }
-    .card-title {
-        min-height: 70px;
-    }
-}
-.bg-img-text {
-    min-height: 90px;
-    background-position: 50% 50%;
-    background-attachment: fixed;
-    font-size: 70px;
-    font-weight: 700;
-    color: transparent;
-    -webkit-background-clip: text;
-}
-#home-content-wrapper {    
-    h3 {
-        top: 0px;
-        left: -5%;
-        padding: 0 10% 1% 7%;
-        width: 110vw;
-        transform: rotate(-5deg);
-        mix-blend-mode: screen;
-        color: #000;
-        font-size: 50px;
-        font-weight: 700;
-        @include res(sm) {
-            font-size: 60px;
-        }
-        @include res(md) {
-            font-size: 70px;
-        }
-    }
-}
-#home-content {
-    margin-top: 250px;
-    #home-content-text {
-        @include res(md) {
-            flex:0 0 calc(90% + 28px);
-            max-width: none;
-        }
-        // @include res(xl) {
-        //     flex:0 0 calc(81% + 32px);
-        // }
-        .hca-content{
-            min-width: 80%;
-            min-height: 200px;
-            margin: 10%;
-        }
-        background-image: url("../img/green3.jpg");
-        background-size: cover;
-    }
-    .col-md-3h {
-        @include res(md) {
-            flex:0 0 30%;
-        }
-        // @include res(xl) {
-        //     flex:0 0 27%;
-        // }
-        .hca-content {
-            @extend .button;
-            &:hover {
-                border-color: transparent !important;
-                background: rgba(255, 255, 255, 0.2);
+    #nwrapper {
+        height: 80vh;
+        #naslov {
+            h1 {
+                font-size: 2.2em;
+                @include res(sm) {
+                    font-size: 3em;
+                }
+            }
+            margin-top: 100px; 
+            background: $darkTrans;
+            backdrop-filter: blur(3px);
+            padding: 1% 3%;
+            @include res(lg){
+                padding: 0px;
+                width: 40%;
+                background: none;
+                backdrop-filter: none;
+                margin: 100px 80px;
             }
         }
     }
-    a {
-        @extend .z-2;
-        min-width: 80%;
-        min-height: 200px;
-        margin: 10%;
-    }
-    .hca-content{
-        min-height: 200px;
-        border-width: 3px !important;
-        p {
-            font-size: 0.85em;
-            color: rgba(255,255,255,0.7);
+    #advantages {
+        padding: 20vh 0;
+        @include res(lg) {
+            padding: 20vh 150px;
         }
-        h2 {
-            font-size: 1.4em;
+        @include res(xl) {
+            padding: 20vh 0;
+        }
+        .card {
+            h2 {
+                font-size: 1.2em;
+            }
+            span {
+                font-size: 6em;
+                color: $primary;
+            }
+            @include res(sm) {
+                max-width: 300px;
+            }
+            @include res(lg) {
+                max-width: 300px;
+            }
+            @include res(xl) {
+                max-width: 250px;
+            }
+        }
+        .card-title {
+            min-height: 70px;
         }
     }
-    #gt-img {
-        background-image: url("../img/green.jpg");
-        background-size: cover;
+    #home-content-wrapper {    
+        h3 {
+            top: 0px;
+            left: -5%;
+            padding: 0 10% 1% 7%;
+            width: 110vw;
+            transform: rotate(-5deg);
+            mix-blend-mode: screen;
+            color: #000;
+            font-size: 50px;
+            font-weight: 700;
+            @include res(sm) {
+                font-size: 60px;
+            }
+            @include res(md) {
+                font-size: 70px;
+            }
+        }
+        #home-content {
+            margin-top: 250px;
+            #home-content-text {
+                @include res(md) {
+                    flex:0 0 calc(90% + 28px); // sirina + margine
+                    max-width: none;
+                }
+                @include res(lg) {
+                    flex:0 0 calc(90% + 32px);
+                }
+                .hca-content{
+                    min-width: 80%;
+                    margin: 10%;
+                }
+                background-image: url("../img/green3.jpg");
+                background-size: cover;
+            }
+            .col-md-3h {
+                @include res(md) {
+                    flex:0 0 30%;
+                }
+                .hca-content {
+                    &:hover {
+                        border-color: transparent !important;
+                        background: rgba(255, 255, 255, 0.2);
+                    }
+                }
+            }
+            a {
+                min-width: 80%;
+                min-height: 200px;
+                margin: 10%;
+            }
+            .hca-content{
+                min-height: 200px;
+                border-width: 3px !important;
+                p {
+                    font-size: 0.85em;
+                    color: rgba(255,255,255,0.7);
+                }
+                h2 {
+                    font-size: 1.4em;
+                }
+            }
+            #gt-img {
+                background-image: url("../img/green.jpg");
+                background-size: cover;
+            }
+            #bt-img {
+                background-image: url("../img/black.jpg");
+                background-size: cover;
+            }
+            #ot-img {
+                background-image: url("../img/chamomile.jpg");
+                background-size: cover;
+            }
+            
+        }
     }
-    #bt-img {
-        background-image: url("../img/black.jpg");
-        background-size: cover;
+
+}
+// FOOTER
+footer {
+    span {
+        font-size: 1.5em;
+        
+        &.fa-facebook {
+            color: #3b5998;
+        }
+        &.fa-youtube {
+            color: #ff0000;
+            filter: brightness(85%);
+        }
+        &.fa-instagram {
+            background:linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        &:hover {
+            filter: brightness(130%);
+        }
     }
-    #ot-img {
-        background-image: url("../img/chamomile.jpg");
-        background-size: cover;
-    }
-    
 }
 // TEA TYPES
 .carousel {
@@ -379,7 +414,6 @@ ul {
     }
     .carousel-indicators {
         top: 60vh;
-        bottom: none;
         li {
             width: 8vw;
             margin: 0 0.5vw;
@@ -390,23 +424,49 @@ ul {
     }
 }
 #page-naslov {
-    bottom: 40vh;
-    font-size: 13vw;
-    font-weight: 500;
-    @include res(lg) {
-        font-size: 128px;
+    h1 {
+        font-size: 14vw;
+        @include res(md) {
+            font-size: 110px;
+        }
     }
-    color: rgba(255, 255, 255, 1);
+    p {
+        max-width: 500px;
+        font-size: 1em;
+        @include res(sm) {
+            font-size: 1.1em;
+        }
+    }
+    bottom: 40vh;
 }
 #page-content {
     p {
         white-space: pre-wrap;
+        &#pblack {
+            border-color: rgba(44, 13, 0, 0.8);
+        }
+        &#pother {
+            border-color: rgba(196, 193, 28, 0.8);
+        }
+        #truetea {
+            color: #2c0d00;
+        }
+        #herbaltea {
+            color: #b39a0f;
+        }
     }
     h2 {
-        background-image: url("../img/green3.jpg");
-        // background-attachment: fixed;
-        filter: brightness(80%) saturate(80%);
+        filter: brightness(90%) saturate(80%);
         font-size: 50px;
+        &#h2green{
+            background-image: url("../img/green3.jpg");
+        }
+        &#h2black {
+            background-image: url("../img/black1.jpg");
+        }
+        &#h2other {
+            background-image: url("../img/other1.jpg");
+        }
         @include res(sm) {
             font-size: 70px;
         }
@@ -426,6 +486,18 @@ ul {
                 flex:0 0 28%;
             }
         }
+        .card {
+            
+            img {
+                transition: transform .2s;
+                transform-origin: bottom;
+            }
+            &:hover {
+                img {
+                    transform: scale(1.15,1.15);
+                }
+            }
+        }
         h3 {
             font-size: 2.2em;
             left: 1.25rem;
@@ -434,35 +506,14 @@ ul {
                 background: rgba(26, 95, 35, 0.7);
             }
             &#h3black {
-
+                background: rgba(39, 19, 17, 0.7);
             }
-            &#h3other {
-
+            &#h3herbal {
+                background: rgba(172, 136, 19, 0.7);
             }
         }
         p {
             font-size: 0.9em;
-        }
-    }
-}
-footer {
-    span {
-        font-size: 1.5em;
-        
-        &.fa-facebook {
-            color: #3b5998;
-        }
-        &.fa-youtube {
-            color: #ff0000;
-            filter: brightness(85%);
-        }
-        &.fa-instagram {
-            background:linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        &:hover {
-            filter: brightness(130%);
         }
     }
 }
