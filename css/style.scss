@@ -2,7 +2,7 @@ $primary: #2B804E;
 $color1: #42965F;
 $color2: #72BC79;
 $whiteTrans: rgba(255, 255, 255, 0.8);
-$darkTrans: rgba(0,0,0,0.3);
+$darkTrans: rgba(0,0,0,0.2);
 @font-face{
     src: url("../fonts/Muli-Regular.ttf");
     font-family: Muli;
@@ -116,7 +116,7 @@ ul {
     width: 100vw;
 }
 .text-shadow {
-    text-shadow: 2px 2px 14px rgba(0,0,0,0.8);
+    text-shadow: 3px 3px 16px rgba(0,0,0,0.8);
 }
 .bg-glass {
     background: $whiteTrans;
@@ -242,11 +242,12 @@ ul {
     filter: blur(0px); //za backdrop-filter bag
     background-image: url("../img/bgHome.jpg");
     will-change: opacity, transform;
-    animation: home 0.5s ease-out;
+    transform-origin: bottom;
+    animation: home .5s;
     @keyframes home {
         0% {
-            transform: scale(0.9, 0.9);
-            opacity: 0.4;
+            transform: scale(0.95, 0.95);
+            opacity: 0.7;
         }
         100% {   
             transform: scale(1, 1);
@@ -257,9 +258,9 @@ ul {
         height: 80vh;
         #naslov {
             h1 {
-                font-size: 2.2em;
+                font-size: 2.7em;
                 @include res(sm) {
-                    font-size: 3em;
+                    font-size: 3.3em;
                 }
             }
             margin-top: 100px; 
@@ -267,11 +268,16 @@ ul {
             backdrop-filter: blur(3px);
             padding: 1% 3%;
             @include res(lg){
-                padding: 0px;
-                width: 40%;
-                background: none;
-                backdrop-filter: none;
+                width: 50%;
                 margin: 100px 80px;
+                background: none;
+                backdrop-filter: none; 
+                h1, p {
+                    transform-origin: bottom left;
+                    padding: 5px;
+                    background: $darkTrans;
+                    backdrop-filter: blur(3px);
+                }
             }
         }
     }
@@ -425,9 +431,12 @@ footer {
 }
 #page-naslov {
     h1 {
-        font-size: 14vw;
-        @include res(md) {
-            font-size: 110px;
+        font-size: 50px;
+        @include res(sm) {
+            font-size: 10vw;
+        }
+        @include res(lg) {
+            font-size: 100px;
         }
     }
     p {
@@ -487,7 +496,6 @@ footer {
             }
         }
         .card {
-            
             img {
                 transition: transform .2s;
                 transform-origin: bottom;
