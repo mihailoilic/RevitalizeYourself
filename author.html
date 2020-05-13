@@ -10,13 +10,178 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
     <title>Revitalize Yourself!</title>
     <link rel="stylesheet" type="text/css" href="css/materialize.min.css"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css"/>
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
 </head>
 <body>
-    <h5 class="center-align">Page in progress</h5>
-    <a href="index.html" class="btn pulse green darken-3" style="display: block; width: 150px; margin: 0px auto; ">Homepage</a>
+  <!-- NAVIGACIJA -->
+    <header id="header">
+        <nav id="m-nav" class="z-3 h-80p bg-glass">
+            <div class="nav-wrapper row z-3 ">
+                <a href="index.html" class="col s2 brand-logo h-80p">
+                    <img src="img/logoMd.png" alt="logo md" class="hide-on-small-only my-10p"/>
+                    <img src="img/logoXs.png" alt="logo xs" class="hide-on-med-and-up my-10p"/>
+                </a>
+                <ul id="m-meni" class="col s9 flex hide-on-med-and-down">
+                    <li class="flex h-80p">
+                        <a href="index.html">Home</a>
+                      </li>
+                      <li class="flex h-80p">
+                        <a href="green.html">Green Tea</a>
+                      </li>
+                      <li class="flex h-80p">
+                        <a href="black.html">Black Tea</a>
+                      </li>
+                      <li class="flex h-80p">
+                        <a href="other.html">Other Types</a>
+                      </li>
+                      <li class="flex h-80p activeLink">
+                          <a href="author.html">Author</a>
+                      </li>
+                      <li class="flex h-80p">
+                        <a class="modal-trigger" href="#m-suggest">
+                          <span class="far fa-comment"></span> Suggest
+                        </a>
+                      </li>
+                </ul>
+                <ul class="collapsible right hide-on-large-only col s2">
+                    <li id="res-nav" class="right valign-wrapper">
+                        <div class="collapsible-header navbar-toggler">
+                            <span class="fas fa-bars"></span>
+                        </div>
+                        <ul class="collapsible-body z-3 bg-glass">
+                            <li class="center-align">
+                              <a href="index.html">Home</a>
+                            </li>
+                            <li class="center-align">
+                              <a href="green.html">Green Tea</a>
+                            </li>
+                            <li class="center-align">
+                              <a href="black.html">Black Tea</a>
+                            </li>
+                            <li class="center-align">
+                              <a href="other.html">Other Types</a>
+                            </li>
+                            <li class="center-align activeLink">
+                                <a href="author.html">Author</a>
+                            </li>
+                            <li class="center-align">
+                              <a class="modal-trigger" href="#m-suggest">
+                                <span class="far fa-comment"></span> Suggest
+                              </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav> 
+    </header>
+    <!-- MODAL - SUGGEST -->
+    <div id="m-suggest" class="modal bg-glass">
+      <div class="modal-content">
+        <h5 class="left">Make a suggestion</h5>
+        <a href="#!" class="modal-close right grey-text text-darken-1"><span>&times;</span></a>
+        <form name="ms-forma" id="ms-forma" action="#" method="GET">
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="tbName" name="tbName" type="text" class="validate">
+              <label for="tbName" class="grey-text">Your name*</label>
+            </div>
+            <div class="input-field col s12">
+              <input id="tbEmail" name="tbEmail" type="email">
+              <label for="tbEmail" class="grey-text">Your email address</label>
+            </div>
+            <div class="input-field col s12">
+              <textarea id="m-poruka" name="m-poruka" class="materialize-textarea validate"></textarea>
+              <label for="m-poruka" class="grey-text">Please enter your message here*</label>
+            </div>
+            <small class="col s12 grey-text text-darken-1">All suggestions and critics are welcome!</small>
+            <div class="col s12">
+              <button type="submit" class="btn btn-success waves-effect" name="btnSubmit" id="btnSubmit">Send</button>
+              <button type="reset" class="btn btn-outline-success waves-effect" name="btnReset" id="btnReset">Reset</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close btn btn-outline-success waves-effect">Close</a>
+      </div>
+    </div>
+    <!-- MAIN CONTENT -->
+    <div id="author" class="row flex page-bg-image text-shadow">
+      <div id="a-naslov" class="col s11 flex">
+        <h1 class="white-text center-align bg-blur animate">About Author</h1>
+      </div>
+      <img src="img/portrait.jpg" alt="author" class="col s7 m4 l3 xl2 circle animate"/>
+      <p id="about" class="col s11 m8 xl7 bg-blur white-text animate">Hi. My name's Mihailo Ilić and I'm a web developer from Serbia. I graduated from First Belgrade Gymnasium. I've recently started studying IT/Web programming at <a href="https://ict.edu.rs/" target="_blank" class="link-dashed white-text"><span class="material-icons">school</span> ICT College</a> because I've always been interested in computers and technology.
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+I'd describe my personality as peaceful and friendly. I'm also diligent and I always pay attention to details while doing my projects. Although my skills are limited at this moment, I will continuously try to improve them through my studies, projects etc.</p>
+      <a id="portfolio" href="https://mihailoilic.github.io/portfolio/" target="_blank" class="col s11 m8 l11 xl9 flex white-text valign-wrapper bg-blur animate">
+        <img src="img/portfolio.png" alt="portfolio"/><span>Visit my portfolio website!</span>
+      </a>
+      <div id="contact-info" class="col s11 m8 l5 xl4 flex bg-blur animate">
+        <h5 class="white-text">Contact info</h5>
+        <a href="tel:+38160123456" class="col s11 button flex" target="_blank"><span class="material-icons">phone_in_talk</span>  +381 60 123456</a>
+        <a href="mailto:mihailo.ilic.41.19@ict.edu.rs" class="col s11 button flex" target="_blank"><span class="material-icons">email</span>  mihailo.ilic.41.19@ict.edu.rs</a>
+        <a href="https://github.com/mihailoilic" class="col s11 button flex" target="_blank"><span class="fab fa-github"></span>  See my Github projects</a>
+      </div>
+      <div class="col s11 m8 l6 xl5 flex bg-blur animate">
+        <h5 class="white-text">Send me a message</h5>
+        <form name="a-forma" id="a-forma" class="col s12" action="#" method="GET">
+          <div class="row flex">
+            <div class="input-field bg-wt2 col s11">
+              <input id="aEmail" name="aEmail" type="email" class="white-text validate">
+              <label for="aEmail" class="grey-text text-lighten-2">Your email address*</label>
+            </div>
+            <div class="input-field bg-wt2 col s11">
+              <textarea id="a-poruka" name="a-poruka" class="materialize-textarea white-text validate"></textarea>
+              <label for="a-poruka" class="grey-text text-lighten-2">Please enter your message here*</label>
+            </div>
+            <div class="col s11 flex">
+              <button type="submit" class="button btn" name="btnSubmit" id="btnSubmit">Send</button>
+              <button type="reset" class="button btn" name="btnReset" id="btnReset">Reset</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      
+      <!-- FOOTER -->
+      <footer class="row col s12 white-text valign-wrapper bg-blur">
+        <ul id="social" class="col s12 m4 flex">
+          <li>
+            <a href="https://www.facebook.com/" target="_blank" title="Facebook">
+              <span class="fab fa-facebook"></span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/" target="_blank" title="Instagram">
+              <span class="fab fa-instagram"></span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/" target="_blank" title="Youtube">
+              <span class="fab fa-youtube"></span>
+            </a>
+          </li>
+        </ul>
+        <p class="col s12 m4 flex">
+        Copyright &copy; ICT College 2020
+        </p>
+        <ul id="links" class="col s12 m4 flex">
+          <li>
+            <a href="css/style.scss" target="_blank" title="SCSS file">
+              <span class="fab fa-sass"></span>
+            </a>
+          </li>
+          <li>
+            <a href="sitemap.xml" target="_blank" title="Sitemap">
+              <span class="fas fa-sitemap"></span>
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+    <script type="text/javascript" src="js/materialize.js"></script>
 </body>
 </html>
