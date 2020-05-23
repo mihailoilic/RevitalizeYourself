@@ -1,6 +1,5 @@
 $primary: #2B804E;
 $color1: #42965F;
-$color2: #72BC79;
 $whiteTrans: rgba(255, 255, 255, 0.8);
 $darkTrans: rgba(0,0,0,0.3);
 @font-face{
@@ -22,7 +21,6 @@ $darkTrans: rgba(0,0,0,0.3);
     }
 }
 // GLOBALNO
-
 * {
     &:focus {
         outline-color: $primary !important;
@@ -128,9 +126,6 @@ ul {
 .h-100vh {
     height: 100vh;
 }
-.w-100vw {
-    width: 100vw;
-}
 .text-shadow {
     text-shadow: 3px 3px 16px rgba(0,0,0,0.8);
 }
@@ -171,13 +166,8 @@ ul {
     background-image: url("../img/teaLeaves.png");
     background-size: cover;
     opacity: 0.8;
-    // height: 100px;
-    // top: -100px;
-    // @include res(lg)
-    // {
-        height: 150px;
-        top: -150px;
-    //}
+    height: 150px;
+    top: -150px;
 }
 .text-image {
     color: $primary;
@@ -309,12 +299,7 @@ ul {
                 font-size: 6em;
                 color: $primary;
             }
-            @include res(sm) {
-                max-width: 300px;
-            }
-            @include res(lg) {
-                max-width: 300px;
-            }
+            max-width: 300px;
             @include res(xl) {
                 max-width: 250px;
             }
@@ -343,6 +328,17 @@ ul {
         }
         #home-content {
             margin-top: 250px;
+            .hca-content{
+                min-height: 200px;
+                border-width: 2px !important;
+                p {
+                    font-size: 0.85em;
+                    color: rgba(255,255,255,0.7);
+                }
+                h2 {
+                    font-size: 1.4em;
+                }
+            }
             #home-content-text {
                 @include res(md) {
                     flex:0 0 calc(90% + 28px); // sirina + margine
@@ -370,22 +366,6 @@ ul {
                     }
                 }
             }
-            a {
-                min-width: 80%;
-                min-height: 200px;
-                margin: 10%;
-            }
-            .hca-content{
-                min-height: 200px;
-                border-width: 2px !important;
-                p {
-                    font-size: 0.85em;
-                    color: rgba(255,255,255,0.7);
-                }
-                h2 {
-                    font-size: 1.4em;
-                }
-            }
             #gt-img {
                 background-image: url("../img/green.jpg");
                 background-size: cover;
@@ -398,7 +378,11 @@ ul {
                 background-image: url("../img/chamomile.jpg");
                 background-size: cover;
             }
-            
+            a {
+                min-width: 80%;
+                min-height: 200px;
+                margin: 10%;
+            }
         }
     }
 
@@ -407,7 +391,6 @@ ul {
 footer {
     span {
         font-size: 1.5em;
-        
         &.fa-facebook {
             color: #3b5998;
         }
@@ -538,7 +521,6 @@ footer {
         }
     }
 }
-
 // AUTHOR STRANICA MATERIALIZE
 .flex {
     display: flex;
@@ -546,7 +528,6 @@ footer {
     align-items: center;
 }
 .row {
-    //padding: 0px;
     .col {
         padding: 0px;
         margin: 0px;
@@ -662,10 +643,9 @@ footer {
             }
         }
     }
-    .collapsible {
+    .collapsible { // responsive meni
         box-shadow: none;
         border: none;
-        //margin: 0px;
         padding: 0px;
         height: 100%;
         #res-nav {
@@ -673,29 +653,29 @@ footer {
             &.active {
                 background: none;
             }
-        }
-        .collapsible-header {
-            background: none;
-            border: none;
-            padding: 0px;
-        }
-        .collapsible-body {
-            position: absolute;
-            top: 80px;
-            left: 0px;
-            width: 100vw;
-            padding: 0px;
-            li {
-                width: 100%;
-                line-height: 40px;
-                &.activeLink {
-                    background: rgba(0,0,0,0.1);
-                }
-                a {
-                    color: $primary;
-                    &:hover{
-                        color: $color1;
-                        background: none;
+            .collapsible-header {
+                background: none;
+                border: none;
+                padding: 0px;
+            }
+            .collapsible-body {
+                position: absolute;
+                top: 80px;
+                left: 0px;
+                width: 100vw;
+                padding: 0px;
+                li {
+                    width: 100%;
+                    line-height: 40px;
+                    &.activeLink {
+                        background: rgba(0,0,0,0.1);
+                    }
+                    a {
+                        color: $primary;
+                        &:hover{
+                            color: $color1;
+                            background: none;
+                        }
                     }
                 }
             }
@@ -703,9 +683,9 @@ footer {
     } 
 }
 .hiddendiv {
-    max-width: 90vw;
+    max-width: 90vw; // bag
 }
-// MAIN CONTENT
+// AUTHOR - MAIN CONTENT
 #author {
     background-image: url("../img/bgAuthor.jpg");
     min-height: 100vh;
@@ -720,13 +700,19 @@ footer {
     .material-icons {
         font-size: 1.1em;
     }
+    //naslov
     #a-naslov {
         margin: 20px 0px;
         h1 {
             margin: 0px;
             padding: 5px;
+            font-size: 10vw;
+            @include res(sm){
+                font-size: 56px;
+            }
         }
     }
+    // tekst
     #about {
         padding: 10px;
         white-space: pre-wrap;
@@ -734,35 +720,7 @@ footer {
             display: inline-block;
         }
     }
-    div.bg-blur {
-        min-height: 310px;
-    }
-    .button {
-        border: none;
-        height: 40px;
-        white-space: pre-wrap;
-    }
-    #contact-info {
-        flex-direction: column;
-        justify-content: flex-start;
-        h5 {
-            margin-bottom: 20px;
-        }
-    }
-    @include inputField();
-    #a-forma {
-        .input-field {
-            margin: 10px 0px;
-        }
-        input, textarea {
-            &:focus + label {
-                color: #fff !important;
-            }
-        }
-        .btn {
-            margin: 0 5px;
-        }
-    }
+    // portfolio ws link
     #portfolio {
         height: 60px;
         img {
@@ -777,6 +735,38 @@ footer {
         transition: background .2s;
         &:hover {
             background: rgba(255, 255, 255, 0.3);
+        }
+    }
+    .button {
+        border: none;
+        height: 40px;
+        white-space: pre-wrap;
+    }
+    
+    div.bg-blur {
+        min-height: 310px;
+    }
+    // kontakt
+    #contact-info {
+        flex-direction: column;
+        justify-content: flex-start;
+        h5 {
+            margin-bottom: 20px;
+        }
+    }
+    @include inputField();
+    // forma
+    #a-forma {
+        .input-field {
+            margin: 10px 0px;
+        }
+        input, textarea {
+            &:focus + label {
+                color: #fff !important;
+            }
+        }
+        .btn {
+            margin: 0 5px;
         }
     }
     // FOOTER
