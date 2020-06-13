@@ -77,10 +77,6 @@ ul {
         outline: none;
     }
 }
-.btn {
-    box-shadow: 0px 3px 8px rgba(0,0,0,0.15);
-    padding: 6px 10px;
-}
 .btn-success {
     background-color: $primary;
     border: 1px solid $primary;
@@ -103,7 +99,7 @@ ul {
     display: block;
     color: #fff;
     border: 1px solid #fff;
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0,0,0,0.15);
     transition: background .3s;
     &:hover {
         background: $whiteTrans;
@@ -142,6 +138,9 @@ ul {
 .bg-blur {
     background: $darkTrans;
     backdrop-filter: blur(3px);
+}
+.bg-dark {
+    background: $darkTrans;
 }
 .border-line {
     border: 2px solid $primary ;
@@ -270,7 +269,7 @@ ul {
             @extend .bg-blur;
             padding: 1% 3%;
             @include res(lg){
-                width: 50%;
+                width: 55%;
                 margin: 100px 80px;
                 background: none;
                 backdrop-filter: none; 
@@ -340,13 +339,8 @@ ul {
                 }
             }
             #home-content-text {
-                @include res(md) {
-                    flex:0 0 calc(90% + 28px); // sirina + margine
-                    max-width: none;
-                }
-                @include res(lg) {
-                    flex:0 0 calc(90% + 32px);
-                }
+                flex:0 0 calc(90% + 28px); // sirina + margine
+                max-width: none;
                 .hca-content{
                     min-width: 80%;
                     margin: 10%;
@@ -473,17 +467,14 @@ footer {
             background-image: url("../img/other1.jpg");
         }
         @include res(sm) {
-            font-size: 70px;
+            font-size: 60px;
         }
         @include res(md) {
-            font-size: 80px;
+            font-size: 75px;
         }
         @include res(lg) {
-            font-size: 90px;
+            font-size: 85px;
         }
-    }
-    #page-content-text {
-        max-width: 1700px;
     }
     #page-content-types {
         .col-xl-3h {
@@ -570,6 +561,8 @@ footer {
         background-color: $color1;
         color: #fff;
     }
+    margin: 0px 2px;
+    padding: 6px 10px;
 }
 // MATERIALIZE MODAL
 #m-suggest {
@@ -742,8 +735,7 @@ footer {
         height: 40px;
         white-space: pre-wrap;
     }
-    
-    div.bg-blur {
+    div.bg-dark {
         min-height: 310px;
     }
     // kontakt
@@ -765,9 +757,7 @@ footer {
                 color: #fff !important;
             }
         }
-        .btn {
-            margin: 0 5px;
-        }
+        
     }
     // FOOTER
     footer.row.col {

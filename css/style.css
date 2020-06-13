@@ -72,12 +72,6 @@ ul {
   outline: none;
 }
 
-.btn {
-  -webkit-box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.15);
-  padding: 6px 10px;
-}
-
 .btn-success {
   background-color: #2B804E;
   border: 1px solid #2B804E;
@@ -103,7 +97,7 @@ ul {
   display: block;
   color: #fff;
   border: 1px solid #fff;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.15);
   -webkit-transition: background .3s;
   transition: background .3s;
 }
@@ -169,6 +163,10 @@ ul {
   background: rgba(0, 0, 0, 0.3);
   -webkit-backdrop-filter: blur(3px);
           backdrop-filter: blur(3px);
+}
+
+.bg-dark {
+  background: rgba(0, 0, 0, 0.3);
 }
 
 .border-line {
@@ -362,7 +360,7 @@ ul {
 
 @media (min-width: 992px) {
   #home #nwrapper #naslov {
-    width: 50%;
+    width: 55%;
     margin: 100px 80px;
     background: none;
     -webkit-backdrop-filter: none;
@@ -461,25 +459,12 @@ ul {
 }
 
 #home #home-content-wrapper #home-content #home-content-text {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(90% + 28px);
+          flex: 0 0 calc(90% + 28px);
+  max-width: none;
   background-image: url("../img/green3.jpg");
   background-size: cover;
-}
-
-@media (min-width: 768px) {
-  #home #home-content-wrapper #home-content #home-content-text {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 calc(90% + 28px);
-            flex: 0 0 calc(90% + 28px);
-    max-width: none;
-  }
-}
-
-@media (min-width: 992px) {
-  #home #home-content-wrapper #home-content #home-content-text {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 calc(90% + 32px);
-            flex: 0 0 calc(90% + 32px);
-  }
 }
 
 #home #home-content-wrapper #home-content #home-content-text .hca-content {
@@ -636,24 +621,20 @@ footer span:hover {
 
 @media (min-width: 576px) {
   #page-content h2 {
-    font-size: 70px;
+    font-size: 60px;
   }
 }
 
 @media (min-width: 768px) {
   #page-content h2 {
-    font-size: 80px;
+    font-size: 75px;
   }
 }
 
 @media (min-width: 992px) {
   #page-content h2 {
-    font-size: 90px;
+    font-size: 85px;
   }
-}
-
-#page-content #page-content-text {
-  max-width: 1700px;
 }
 
 @media (min-width: 1200px) {
@@ -722,6 +703,8 @@ footer span:hover {
   line-height: normal;
   height: auto;
   text-transform: none;
+  margin: 0px 2px;
+  padding: 6px 10px;
 }
 
 .btn:focus {
@@ -991,7 +974,7 @@ footer span:hover {
   white-space: pre-wrap;
 }
 
-#author div.bg-blur, #author #home #nwrapper div#naslov, #home #nwrapper #author div#naslov {
+#author div.bg-dark {
   min-height: 310px;
 }
 
@@ -1050,10 +1033,6 @@ footer span:hover {
 
 #author #a-forma input:focus + label, #author #a-forma textarea:focus + label {
   color: #fff !important;
-}
-
-#author #a-forma .btn {
-  margin: 0 5px;
 }
 
 #author footer.row.col {
