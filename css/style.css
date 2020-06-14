@@ -571,13 +571,14 @@ footer span:hover {
 }
 
 #page-naslov p {
-  max-width: 500px;
+  max-width: 70%;
   font-size: 1em;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 768px) {
   #page-naslov p {
     font-size: 1.1em;
+    max-width: 500px;
   }
 }
 
@@ -868,6 +869,8 @@ footer span:hover {
 
 .nav-wrapper .collapsible #res-nav .collapsible-body {
   position: absolute;
+  background: rgba(215, 233, 222, 0.95);
+  border: none;
   top: 80px;
   left: 0px;
   width: 100vw;
@@ -910,7 +913,7 @@ footer span:hover {
 }
 
 #author .col {
-  margin: 10px;
+  margin: 15px;
 }
 
 #author .material-icons {
@@ -933,39 +936,47 @@ footer span:hover {
   }
 }
 
-#author #about {
-  padding: 10px;
+#author #about p {
+  margin: 10px;
   white-space: pre-wrap;
 }
 
-#author #about a {
+#author #about p a {
   display: inline-block;
+}
+
+#author #about .carousel {
+  height: 120px;
+  margin-bottom: 10px;
+}
+
+#author #about .carousel .carousel-item {
+  height: 120px;
+  width: 254px;
+}
+
+#author #about .carousel .carousel-item img {
+  height: 120px;
 }
 
 #author #portfolio {
   height: 60px;
-  -webkit-transition: background .2s;
-  transition: background .2s;
-}
-
-#author #portfolio img {
-  height: 40px;
 }
 
 @media (min-width: 992px) {
   #author #portfolio {
-    width: calc(91.6666666667% + 20px);
+    width: calc(91.6666666667% + 30px);
   }
 }
 
 @media (min-width: 1200px) {
   #author #portfolio {
-    width: calc(75% + 20px);
+    width: calc(75% + 30px);
   }
 }
 
-#author #portfolio:hover {
-  background: rgba(255, 255, 255, 0.3);
+#author #portfolio img {
+  height: 40px;
 }
 
 #author .button {
@@ -974,8 +985,8 @@ footer span:hover {
   white-space: pre-wrap;
 }
 
-#author div.bg-dark {
-  min-height: 310px;
+#author #contact-info, #author #a-forma-wrapper {
+  min-height: 330px;
 }
 
 #author #contact-info {

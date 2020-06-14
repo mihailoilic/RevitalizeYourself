@@ -430,10 +430,11 @@ footer {
         }
     }
     p {
-        max-width: 500px;
+        max-width: 70%;
         font-size: 1em;
-        @include res(sm) {
+        @include res(md) {
             font-size: 1.1em;
+            max-width: 500px;
         }
     }
     bottom: 40vh;
@@ -636,7 +637,8 @@ footer {
             }
         }
     }
-    .collapsible { // responsive meni
+    // RESPONSIVE MENI
+    .collapsible {
         box-shadow: none;
         border: none;
         padding: 0px;
@@ -653,6 +655,8 @@ footer {
             }
             .collapsible-body {
                 position: absolute;
+                background: rgba(215, 233, 222, 0.95);
+                border: none;
                 top: 80px;
                 left: 0px;
                 width: 100vw;
@@ -688,12 +692,12 @@ footer {
     }
     padding: 140px 0 0 0;
     .col {
-        margin: 10px;
+        margin: 15px;
     }
     .material-icons {
         font-size: 1.1em;
     }
-    //naslov
+    // NASLOV
     #a-naslov {
         margin: 20px 0px;
         h1 {
@@ -705,29 +709,38 @@ footer {
             }
         }
     }
-    // tekst
+    // TEKST
     #about {
-        padding: 10px;
-        white-space: pre-wrap;
-        a {
-            display: inline-block;
+        p {
+            margin: 10px;
+            white-space: pre-wrap;
+            a {
+                display: inline-block;
+            }
+        }
+        .carousel {
+            height: 120px;
+            margin-bottom: 10px;
+            .carousel-item {
+                height: 120px;
+                width: 254px;
+                img {
+                    height: 120px;
+                }
+            }
         }
     }
-    // portfolio ws link
+    // PORTFOLIO LINK
     #portfolio {
+        @include res(lg) {
+            width:  calc(91.6666666667% + 30px);
+        }
+        @include res(xl) {
+            width:  calc(75% + 30px);
+        }
         height: 60px;
         img {
             height: 40px;
-        }
-        @include res(lg) {
-            width:  calc(91.6666666667% + 20px);
-        }
-        @include res(xl) {
-            width:  calc(75% + 20px);
-        }
-        transition: background .2s;
-        &:hover {
-            background: rgba(255, 255, 255, 0.3);
         }
     }
     .button {
@@ -735,10 +748,10 @@ footer {
         height: 40px;
         white-space: pre-wrap;
     }
-    div.bg-dark {
-        min-height: 310px;
+    #contact-info, #a-forma-wrapper {
+        min-height: 330px;
     }
-    // kontakt
+    // KONTAKT
     #contact-info {
         flex-direction: column;
         justify-content: flex-start;
@@ -747,7 +760,7 @@ footer {
         }
     }
     @include inputField();
-    // forma
+    // FORMA
     #a-forma {
         .input-field {
             margin: 10px 0px;
@@ -759,7 +772,7 @@ footer {
         }
         
     }
-    // FOOTER
+    // ========== FOOTER ========== 
     footer.row.col {
         flex-wrap: wrap;
         margin: 50px 0 0 0;
@@ -772,4 +785,3 @@ footer {
         }
     }
 }
-

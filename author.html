@@ -4,11 +4,11 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="description"
-    content=""/>
-    <meta name="keywords" content=""/>
+    content="Learn more about the author of this website. You can see some of my projects here or visit my portfolio website. Feel free to contact me if you have any questions."/>
+    <meta name="keywords" content="author, developer, web, revitalize, contact"/>
     <meta name="author" content="Mihailo Ilic"/>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
-    <title>Revitalize Yourself!</title>
+    <title>About Author | Revitalize Yourself</title>
     <link rel="stylesheet" type="text/css" href="css/materialize.min.css"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css"/>
@@ -50,7 +50,7 @@
                         <div class="collapsible-header navbar-toggler">
                             <span class="fas fa-bars"></span>
                         </div>
-                        <ul class="collapsible-body z-3 bg-glass">
+                        <ul class="collapsible-body z-3">
                             <li class="center-align">
                               <a href="index.html">Home</a>
                             </li>
@@ -114,19 +114,27 @@
         <h1 class="white-text center-align bg-dark animate">About Author</h1>
       </div>
       <img src="img/portrait.jpg" alt="author" class="col s7 m4 l3 xl2 circle animate"/>
-      <p id="about" class="col s11 m8 xl7 bg-dark white-text animate">Hi. My name's Mihailo Ilić and I'm a web developer from Serbia. I graduated from First Belgrade Gymnasium. I've recently started studying IT/Web programming at <a href="https://ict.edu.rs/" target="_blank" class="link-dashed white-text"><span class="material-icons">school</span> ICT College</a> because I've always been interested in computers and technology.
+      <div id="about" class="col s11 m8 xl7 bg-dark white-text animate">
+        <p>Hi. My name's Mihailo Ilić and I'm a web developer from Serbia. I've recently started studying IT/Web programming at <a href="https://ict.edu.rs/" target="_blank" class="link-dashed white-text"><span class="material-icons">school</span> ICT College</a> because I've always been interested in computers and technology.
 
-I'd describe my personality as peaceful and friendly. I'm also diligent and I always pay attention to details while doing my projects. Although my skills are limited at this moment, I will continuously try to improve them through my studies, projects etc.</p>
-      <a id="portfolio" href="https://mihailoilic.github.io/portfolio/" target="_blank" class="col s11 m8 l11 xl9 flex white-text valign-wrapper bg-dark animate">
+Although my skills are limited at this moment, I will continuously try to improve them through my studies, projects etc. You can check my recent projects below.</p>
+        <div class="carousel">
+          <a class="carousel-item" href="index.html"><img src="img/projectRevitalize.jpg"></a>
+          <a class="carousel-item" href="https://mihailoilic.github.io/mihailo/" target="_blank"><img src="img/projectMontana.jpg"></a>
+          <a class="carousel-item" href="https://mihailoilic.github.io/portfolio/" target="_blank"><img src="img/projectPortfolio.jpg"></a>
+        </div></div>
+
+      <a id="portfolio" href="https://mihailoilic.github.io/portfolio/" target="_blank" class="flex col s11 m8 bg-dark button animate">
         <img src="img/portfolio.png" alt="portfolio"/><span>Visit my portfolio website!</span>
       </a>
+      
       <div id="contact-info" class="col s11 m8 l5 xl4 flex bg-dark animate">
         <h5 class="white-text">Contact info</h5>
         <a href="tel:+38160123456" class="col s11 button flex" target="_blank"><span class="material-icons">phone_in_talk</span>  +381 60 123456</a>
         <a href="mailto:mihailo.ilic.41.19@ict.edu.rs" class="col s11 button flex" target="_blank"><span class="material-icons">email</span>  mihailo.ilic.41.19@ict.edu.rs</a>
         <a href="https://github.com/mihailoilic" class="col s11 button flex" target="_blank"><span class="fab fa-github"></span>  See my Github projects</a>
       </div>
-      <div class="col s11 m8 l6 xl5 flex bg-dark animate">
+      <div id="a-forma-wrapper" class="col s11 m8 l6 xl5 flex bg-dark animate">
         <h5 class="white-text">Send me a message</h5>
         <form name="a-forma" id="a-forma" class="col s12" action="#" method="GET">
           <div class="row flex">
@@ -182,6 +190,6 @@ I'd describe my personality as peaceful and friendly. I'm also diligent and I al
         </ul>
       </footer>
     </div>
-    <script type="text/javascript" src="js/materialize.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
 </body>
 </html>
