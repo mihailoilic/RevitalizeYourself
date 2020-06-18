@@ -1,7 +1,7 @@
 $primary: #2B804E;
 $color1: #42965F;
 $whiteTrans: rgba(255, 255, 255, 0.8);
-$darkTrans: rgba(0,0,0,0.3);
+$darkTrans: rgba(0, 0, 0, 0.3);
 @font-face{
     src: url("../fonts/Muli-Regular.ttf");
     font-family: Muli;
@@ -20,7 +20,7 @@ $darkTrans: rgba(0,0,0,0.3);
         @media (min-width: 1200px) { @content; }
     }
 }
-// GLOBALNO
+//========== GLOBALNO ========== 
 * {
     &:focus {
         outline-color: $primary !important;
@@ -57,7 +57,7 @@ a {
 ul {
     list-style-type: none;
 }
-// BOOTSTRAP IZMENE
+// ========== BOOTSTRAP IZMENE ========== 
 .row {
     margin: 0px;
 }
@@ -94,7 +94,7 @@ ul {
         color: #fff;
     }
 }
-// MOJE KLASE
+// ========== MOJE KLASE ========== 
 .button {
     display: block;
     color: #fff;
@@ -193,7 +193,6 @@ ul {
     &:hover {
         background: $darkTrans;
         border-color: transparent;
-
     }
 }
 .animate {
@@ -218,12 +217,12 @@ ul {
         opacity: 1;
     }
 }
-// MODAL SUGGEST FORMA
+// ========== MODAL SUGGEST FORMA ========== 
 #poruka {
     height: 110px;
     resize: none;
 }
-// NAVIGACIJA
+// ========== BOOTS NAVIGACIJA ========== 
 #header {
     a {
         font-size: 1.1em;
@@ -250,7 +249,7 @@ ul {
         }
     }
  }
-// HOME
+// ========== HOME / BOOTS ========== 
 #home {
     filter: blur(0px); //za backdrop-filter bag
     background-image: url("../img/bgHome.jpg");
@@ -307,6 +306,7 @@ ul {
             min-height: 70px;
         }
     }
+    // ========== TRAKA ========== 
     #home-content-wrapper {    
         h3 {
             top: 0px;
@@ -316,20 +316,28 @@ ul {
             transform: rotate(-5deg);
             mix-blend-mode: screen;
             color: #000;
-            font-size: 50px;
+            font-size: 40px;
             font-weight: 700;
             @include res(sm) {
-                font-size: 60px;
+                font-size: 50px;
             }
             @include res(md) {
-                font-size: 70px;
+                font-size: 60px;
+            }
+            @include res(xl) {
+                font-size: 66px;
             }
         }
+        // ========== SADRZAJ TEKST + LINKOVI ========== 
         #home-content {
             margin-top: 250px;
             .hca-content{
                 min-height: 200px;
-                border-width: 2px !important;
+                border-width: 1px !important;
+                border-color: rgba(255, 255, 255, 0.5) !important;
+                blockquote {
+                    font-size: 1.1em;
+                }
                 p {
                     font-size: 0.85em;
                     color: rgba(255,255,255,0.7);
@@ -339,7 +347,9 @@ ul {
                 }
             }
             #home-content-text {
-                flex:0 0 calc(90% + 28px); // sirina + margine
+                @include res(md){
+                    flex:0 0 calc(90% + 28px); // sirina + margine
+                }
                 max-width: none;
                 .hca-content{
                     min-width: 80%;
@@ -381,7 +391,7 @@ ul {
     }
 
 }
-// FOOTER
+// ========== FOOTER / BOOTS ========== 
 footer {
     span {
         font-size: 1.5em;
@@ -402,7 +412,7 @@ footer {
         }
     }
 }
-// TEA TYPES
+// ========== TEA TYPES / BOOTS ========== 
 .carousel {
     .carousel-inner {
         top: 0px;
@@ -439,6 +449,7 @@ footer {
     }
     bottom: 40vh;
 }
+// ========== TEA TYPES TEKST ========== 
 #page-content {
     p {
         white-space: pre-wrap;
@@ -446,15 +457,16 @@ footer {
             border-color: rgba(44, 13, 0, 0.8);
         }
         &#pother {
-            border-color: rgba(196, 193, 28, 0.8);
+            border-color: rgba(189, 152, 33, 0.8);
         }
         #truetea {
             color: #2c0d00;
         }
         #herbaltea {
-            color: #b39a0f;
+            color: #bd9821;
         }
     }
+    //  ========== FORMS OF TEA ========== 
     h2 {
         filter: brightness(90%) saturate(80%);
         font-size: 50px;
@@ -490,7 +502,7 @@ footer {
             }
             &:hover {
                 img {
-                    transform: scale(1.15,1.15);
+                    transform: scale(1.13,1.13);
                 }
             }
         }
@@ -513,7 +525,7 @@ footer {
         }
     }
 }
-// AUTHOR STRANICA MATERIALIZE
+// ========== AUTHOR STRANICA / MATERIALIZE ========== 
 .flex {
     display: flex;
     justify-content: center;
@@ -565,7 +577,7 @@ footer {
     margin: 0px 2px;
     padding: 6px 10px;
 }
-// MATERIALIZE MODAL
+// ========== MATERIALIZE MODAL ========== 
 #m-suggest {
     border-radius: 0px;
     width: 90%;
@@ -596,7 +608,7 @@ footer {
         padding: 0px 20px;
     }
 }
-// MATERIALIZE NAVIGACIJA
+// ========== MATERIALIZE NAVIGACIJA ========== 
 #m-nav {
     position: fixed;
     box-shadow: none;
@@ -637,7 +649,7 @@ footer {
             }
         }
     }
-    // RESPONSIVE MENI
+    // ========== RESPONSIVE MENI ========== 
     .collapsible {
         box-shadow: none;
         border: none;
@@ -682,7 +694,7 @@ footer {
 .hiddendiv {
     max-width: 90vw; // bag
 }
-// AUTHOR - MAIN CONTENT
+// ========== AUTHOR - MAIN CONTENT ========== 
 #author {
     background-image: url("../img/bgAuthor.jpg");
     min-height: 100vh;
@@ -697,7 +709,7 @@ footer {
     .material-icons {
         font-size: 1.1em;
     }
-    // NASLOV
+    // ========== NASLOV ========== 
     #a-naslov {
         margin: 20px 0px;
         h1 {
@@ -709,7 +721,7 @@ footer {
             }
         }
     }
-    // TEKST
+    // ========== TEKST ========== 
     #about {
         p {
             margin: 10px;
@@ -730,7 +742,14 @@ footer {
             }
         }
     }
-    // PORTFOLIO LINK
+    .button {
+        border: none;
+        font-size: 1em;
+        &:hover{
+            background: rgba(255,255,255,0.7) !important;
+        }
+    }
+    // ========== PORTFOLIO LINK ========== 
     #portfolio {
         @include res(lg) {
             width:  calc(91.6666666667% + 30px);
@@ -738,39 +757,44 @@ footer {
         @include res(xl) {
             width:  calc(75% + 30px);
         }
-        height: 60px;
+        height: 80px;
+        padding: 5px;
         img {
-            height: 40px;
+            height: 50px;
         }
     }
-    .button {
-        border: none;
-        height: 40px;
-        white-space: pre-wrap;
-    }
     #contact-info, #a-forma-wrapper {
-        min-height: 330px;
-    }
-    // KONTAKT
-    #contact-info {
-        flex-direction: column;
-        justify-content: flex-start;
+        min-height: 320px;
+        align-items: flex-start;
         h5 {
-            margin-bottom: 20px;
+            padding-top: 25px;
+        }
+        h5, a, div, form {
+            margin: 0px;
+        }
+    }
+    // ========== KONTAKT ========== 
+    #contact-info {
+        a, h5, div {
+            white-space: pre-wrap;
+            height: 80px;
         }
     }
     @include inputField();
-    // FORMA
+    // ========== FORMA ========== 
     #a-forma {
         .input-field {
-            margin: 10px 0px;
+            margin: 0px 0px 20px 0px;
         }
         input, textarea {
             &:focus + label {
                 color: #fff !important;
             }
         }
-        
+        .btn {
+            padding: 10px 15px;
+            margin: 0px 5px;
+        }
     }
     // ========== FOOTER ========== 
     footer.row.col {
