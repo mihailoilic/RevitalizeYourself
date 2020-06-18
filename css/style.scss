@@ -780,8 +780,8 @@ footer {
             height: 80px;
         }
     }
-    @include inputField();
     // ========== FORMA ========== 
+    @include inputField();
     #a-forma {
         .input-field {
             margin: 0px 0px 20px 0px;
@@ -799,7 +799,7 @@ footer {
     // ========== FOOTER ========== 
     footer.row.col {
         flex-wrap: wrap;
-        margin: 50px 0 0 0;
+        margin: 50px 0px 0px 0px;
         min-height: 70px;
         .col {
             margin: 15px 0px;
